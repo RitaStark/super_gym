@@ -136,8 +136,12 @@
 // tablet----------------------------------------------------------------------------
 
 @media (max-width: $desktop-width) {
+    .main-block {
+        min-height: 491px;
+    }
+
     .main-block__wrapper {
-        max-width: 740px;
+        max-width: 1199px;
         margin: 0 auto;
     }
 
@@ -157,7 +161,7 @@
     .main-block__city {
         font-size: 34px;
         line-height: 40px;
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
 
     .main-block__name {
@@ -172,10 +176,6 @@
     .main-block__text {
         max-width: 324px;
         margin-top: 34px;
-    }
-
-    .main-block__city {
-        margin-bottom: 0;
     }
 
     .main-block__services-list {
@@ -203,5 +203,53 @@
 @media (max-width: $tablet-width) {
     .main-block__picture {
         display: none;
+    }
+
+    .main-block__wrapper {
+        max-width: 767px;
+        margin: 0 auto;
+    }
+
+    .main-block__header {
+        padding-top: 19px;
+    }
+
+    .main-block__phone {
+        margin-top: -3px;
+    }
+
+    .main-block__phone a {
+        font-size: 20px;
+    }
+
+    .main-block__city {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 7px;
+    }
+
+    .main-block__name {
+        font-size: 78px;
+        line-height: 78px;
+    }
+
+    .main-block__text,
+    .main-block__header {
+        @include margin-15;
+    }
+
+    .main-block__text {
+        margin-top: 40px;
+    }
+
+    .main-block__button {
+        font-size: 11px;
+
+        padding: 20px 83px;
+    }
+
+    .main-block__services-list {
+        top: 153px;
+        left: 0;
     }
 }
