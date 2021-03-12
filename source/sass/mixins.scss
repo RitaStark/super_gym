@@ -1,0 +1,12 @@
+@mixin bebas-font {
+    font-family: "Bebas Neue", "Arial", cursive;
+}
+
+@mixin roboto-font {
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+@mixin margin-30 {
+    margin-right: 30px;
+    margin-left: 30px;
+}

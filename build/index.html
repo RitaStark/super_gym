@@ -1,13 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>SYPERGYM</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <section class="main-block">
+    <div class="main-block__wrapper">
+      <div class="main-block__header">
+        <div class="main-block__logo">
+          <picture>
+            <!-- 1х: 68px; 2x: 136px -->
+            <source media="(max-width: 767px)" srcset="img/Supergym-logo__mobile.png">
+            <!-- 1х: 82px; 2x: 164px -->
+            <source media="(max-width: 1199px)" srcset="img/Supergym-logo__tablet.png">
+            <!-- 1х: 89px; 2x: 178px -->
+            <img src="img/Supergym-logo__desktop.png" alt="Логотип Supergym" width="89" height="20">
+          </picture>
+        </div>
+        <div class="main-block__phone">
+          <a href="tel:8-800-555-55-55">8-800-555-55-55</a>
+        </div>
+      </div>
+
+      <div class="main-block__text">
+        <p class="main-block__city">Омск</p>
+        <p class="main-block__name">Фитнес центр</p>
+
+        <div class="main-block__services-list">
+          <p>Тренажёрный зал</p>
+          <p>Групповые занятия</p>
+          <p>Кардио-зона</p>
+        </div>
+
+        <a class="main-block__button" href="#">купить абонемент</a>
+      </div>
+
+      <div class="main-block__picture">
+        <picture>
+          <!-- 1х: 324px; 2x: 648px -->
+          <source type="img/webp" media="(max-width: 1199px)" srcset="img/main-block-img_tablet.webp 1x, img/main-block-img_tablet@2x.webp 2x">
+          <!-- 1х: 500px; 2x: 1000px -->
+          <source type="img/webp" media="(max-width: 1920px)" srcset="img/main-block-img_desktop.webp 1x, img/main-block-img_desktop@2x.webp 2x">
+
+          <source media="(max-width: 1199px)" srcset="img/main-block-img_tablet.jpg, img/main-block-img_tablet@2x.jpg 2x">
+          <img src="img/main-block-img_desktop.png" srcset="img/main-block-img_desktop@2x.jpg" alt="Изображение мужчины, который посещает фитнес" width="500" height="556">
+        </picture>
+      </div>
+
+      <div class="main-block__social">
+        <ul class="main-block__social-list">
+          <li><a class="main-block__social-link" href="#" target="_blank">FB</a></li>
+          <li><a class="main-block__social-link" href="#" target="_blank">VK</a></li>
+          <li><a class="main-block__social-link" href="#" target="_blank">IG</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="gym-block">
+
+  </section>
+
+  <section class="subscriptions">
+
+  </section>
+
+  <section class="promo-block">
+
+  </section>
+
+  <section class="trainers">
+
+  </section>
+
+  <section class="advantages">
+
+  </section>
+
+  <section class="stock">
+
+  </section>
+
+  <section class="reviews">
+
+  </section>
+
+  <section class="contacts">
+
+  </section>
+
+  <footer>
+
+  </footer>
+
 </body>
+
 </html>
