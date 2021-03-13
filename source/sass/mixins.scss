@@ -1,5 +1,5 @@
 @mixin bebas-font {
-    font-family: "Bebas Neue", "Arial", cursive;
+    font-family: "Bebas Neue", "Impact", cursive;
 }
 
 @mixin roboto-font {
@@ -14,4 +14,9 @@
 @mixin margin-15 {
     margin-right: 15px;
     margin-left: 15px;
+}
+
+@mixin margin-45 {
+    margin-right: 45px;
+    margin-left: 45px;
 }
