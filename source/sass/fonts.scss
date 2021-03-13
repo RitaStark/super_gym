@@ -3,8 +3,7 @@
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/bebas-neue-v2-latin-regular.eot");
-    src: local("Bebas"),
-        url("../fonts/bebas-neue-v2-latin-regular.woff2") format("woff2"),
+    src: local("Bebas"), url("../fonts/bebas-neue-v2-latin-regular.woff2") format("woff2"),
         url("../fonts/bebas-neue-v2-latin-regular.woff") format("woff");
 }
 
@@ -14,7 +13,6 @@
     font-display: swap;
     font-weight: 400;
     src: url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.eot");
-    src: local("Roboto"),
-        url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2") format("woff2"),
+    src: local("Roboto"), url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2") format("woff2"),
         url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff") format("woff");
 }

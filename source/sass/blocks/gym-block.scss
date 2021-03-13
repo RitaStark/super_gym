@@ -1,0 +1,43 @@
+.gym-block {
+    max-width: 1158px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 120px;
+    padding-bottom: 232px;
+    position: relative;
+}
+
+.gym-block__text {
+    padding: 0 58px;
+}
+
+.gym-block__text h2 {
+    font-size: 41px;
+    line-height: 49px;
+    color: #102654;
+    text-transform: uppercase;
+    margin-top: 45px;
+    margin-bottom: 14px;
+
+    @include bebas-font;
+}
+
+.gym-block__text p {
+    color: rgba(16, 38, 84, 1);
+    font-size: 14px;
+    line-height: 23px;
+
+    @include roboto-font;
+}
+
+.gym-block__text h2 + p {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.gym-block__video {
+    position: absolute;
+    bottom: 117px;
+    left: 436px;
+}
