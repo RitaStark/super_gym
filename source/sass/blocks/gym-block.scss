@@ -94,3 +94,52 @@
         height: 167px;
     }
 }
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .gym-block {
+        max-width: 767px;
+        margin: 0 auto;
+        padding-top: 13px;
+        padding-bottom: 248px;
+    }
+
+    .gym-block__text {
+        text-align: left;
+        padding: 0;
+        @include margin-15;
+    }
+
+    .gym-block__text h2 {
+        font-size: 28px;
+        line-height: 28px;
+        margin-top: 55px;
+        margin-bottom: 13px;
+    }
+
+    .gym-block__img {
+        width: 320px;
+        height: 313px;
+    }
+
+    .gym-block__text h2 + p {
+        margin-bottom: 23px;
+        line-height: 27px;
+    }
+
+    .gym-block__image {
+        margin-top: 24px;
+    }
+
+    .gym-block__video {
+        bottom: 41px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gym-block__video iframe {
+        width: 100vw;
+        height: 167px;
+    }
+}
