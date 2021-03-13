@@ -41,3 +41,56 @@
     bottom: 117px;
     left: 436px;
 }
+
+// tablet----------------------------------------------------------------------------
+
+@media (max-width: $desktop-width) {
+    .gym-block {
+        max-width: 1199px;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 49px;
+        padding-bottom: 178px;
+    }
+
+    .gym-block__text {
+        text-align: center;
+        padding: 0 130px;
+    }
+
+    .gym-block__text p:last-child {
+        display: none;
+    }
+
+    .gym-block__text h2 {
+        font-size: 37px;
+        line-height: 35px;
+        margin-top: 51px;
+        margin-bottom: 17px;
+    }
+
+    .gym-block__text h2 + p {
+        margin-bottom: 37px;
+    }
+
+    .gym-block__image {
+        margin-top: 31px;
+    }
+
+    .gym-block__img {
+        width: 678px;
+        height: 345px;
+    }
+
+    .gym-block__video {
+        bottom: 95px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gym-block__video iframe {
+        width: 266px;
+        height: 167px;
+    }
+}
