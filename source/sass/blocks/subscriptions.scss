@@ -1,14 +1,28 @@
 .subscriptions {
-    background-color: #f8f9fc;
+    background: linear-gradient(#f8f9fc 0%, #f8f9fc 92%, #ffffff 50%, #ffffff 100%);
     margin-bottom: 150px;
-    overflow: hidden;
 }
 
 .subscriptions__wrapper {
     max-width: 1248px;
     margin: 0 auto;
-    padding-bottom: 121px;
+    padding-bottom: 193px;
     padding-top: 78px;
+}
+
+.subscription__container {
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../img/sub-block-img_desktop.png");
+        height: 496px;
+        width: 470px;
+        background-size: 474px 496px;
+        right: -71px;
+        bottom: -80px;
+    }
 }
 
 .subscriptions__wrapper h2 {
@@ -122,30 +136,8 @@
             top: -22px;
             z-index: -1;
         }
-        &::after {
-            content: "";
-            position: absolute;
-            width: 474px;
-            height: 496px;
-            background: url("../img/sub-block-img_desktop.png") no-repeat;
-            background-position: center;
-            background-size: 474px 496px;
-            left: 81px;
-            top: 19px;
-            z-index: -10;
-        }
     }
 }
-
-// .subscriptions__weight-pic {
-//     background: url("../img/sub-block-img_desktop.png") no-repeat;
-//     width: 474px;
-//     height: 496px;
-//     position: absolute;
-//     z-index: -100;
-//     left: 81px;
-//     top: 19px;
-// }
 
 .subscriptions__list-item h3 {
     font-size: 26px;
