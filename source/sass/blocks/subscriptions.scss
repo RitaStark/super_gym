@@ -1,7 +1,20 @@
 .subscriptions {
     background: linear-gradient(#f8f9fc 0%, #f8f9fc 92%, #ffffff 50%, #ffffff 100%);
     margin-bottom: 48px;
+    // position: relative;
+    overflow: hidden;
 }
+
+// .subscriptions__image {
+// background-image: url("../img/sub-block-img_desktop.png");
+// background-repeat: no-repeat;
+// width: 470px;
+// height: 496px;
+// background-size: 470px 496px;
+// position: absolute;
+// right: -89px;
+// bottom: -79px;
+// }
 
 .subscriptions__wrapper {
     max-width: 1248px;
@@ -46,10 +59,20 @@
     padding-left: 0;
     max-width: 345px;
     margin: 0 auto;
-    border-bottom: 2px solid rgba(120, 120, 120, 0.2);
     padding-bottom: 14px;
+    position: relative;
 
     @include roboto-font;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 345px;
+        height: 2px;
+        background-color: rgba(120, 120, 120, 0.2);
+        top: 44px;
+        z-index: -10;
+    }
 }
 
 .subscriptions__list {
@@ -80,6 +103,7 @@
     &:hover {
         border: 7px solid red;
         border-image: url("../img/main-block-background_desktop.png") 30 30 round;
+        // outline: 7px solid linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     }
 
     &--trainer {
