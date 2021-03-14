@@ -1,7 +1,7 @@
 .left-block {
     background-color: #ed0233;
     color: #ffffff;
-    padding: 88px 72px 55px 72px;
+    padding: 88px 72px 99px 72px;
 }
 
 .left-block > p {
@@ -65,10 +65,16 @@
     font-size: 14px;
 }
 
+.left-block__date-wrapper p + p {
+    margin-left: -39px;
+    line-height: 36px;
+}
+
 .left-block__date-wrapper h4 {
     font-size: 40px;
     margin: 0;
 }
+
 .left-block__date-wrapper h4 + p {
     max-width: 50px;
     margin: 2px 0 0 5px;
@@ -91,4 +97,87 @@
     font-size: 40px;
     border: none;
     margin: 0;
+}
+
+// tablet----------------------------------------------------------------------------
+
+@media (max-width: $desktop-width) {
+    .left-block {
+        padding: 47px 72px 55px 44px;
+    }
+
+    .left-block > p {
+        margin-top: 4px;
+        font-size: 10px;
+        margin-bottom: 33px;
+    }
+
+    .left-block__header {
+        font-size: 45px;
+        line-height: 0;
+    }
+
+    .left-block__header p {
+        margin-top: 25px;
+        margin-bottom: 51px;
+    }
+
+    .left-block__info {
+        margin-left: 25px;
+    }
+
+    .left-block__date > p {
+        font-size: 12px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding-bottom: 3px;
+        max-width: 45px;
+    }
+
+    .left-block__date-wrapper h4 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .left-block__date-wrapper p {
+        font-size: 10px;
+        line-height: 23px;
+    }
+
+    .left-block__date-wrapper p + p {
+        margin-left: -29px;
+        margin-bottom: 0;
+        line-height: 18px;
+    }
+
+    .left-block__date-wrapper h4 + p {
+        max-width: 50px;
+        margin: -3px 0 0 5px;
+
+        line-height: 20px;
+    }
+
+    .left-block__time {
+        margin-top: 6px;
+    }
+
+    .left-block__time p {
+        margin-top: 1px;
+        font-size: 10px;
+    }
+
+    .left-block__time > p {
+        padding-bottom: 5px;
+    }
+
+    .left-block__time p + p {
+        font-size: 22px;
+        border: none;
+        margin: 0;
+    }
+
+    .left-block a {
+        display: block;
+        padding: 12px 4px 12px 49px;
+    }
 }
