@@ -68,10 +68,6 @@
     border: none;
 }
 
-.subscriptions__list-item:hover.subscriptions__toggle-item--1months {
-    color: red;
-}
-
 .subscriptions__list-item {
     width: 30%;
     background-color: #ffffff;
@@ -84,7 +80,6 @@
     &:hover {
         border: 7px solid red;
         border-image: url("../img/main-block-background_desktop.png") 30 30 round;
-        border-image-outset: -7;
     }
 
     &--trainer {
@@ -173,4 +168,141 @@
     margin-left: 10px;
 
     @include roboto-font;
+}
+
+.subscriptions__list.subscriptions__trainer:hover
+    ~ .subscriptions__toggle.subscriptions__toggle-list.subscriptions__toggle-item--1months {
+    background-color: red;
+}
+
+// tablet----------------------------------------------------------------------------
+
+@media (max-width: $desktop-width) {
+    .subscriptions {
+        max-width: 1199px;
+        background: linear-gradient(#f8f9fc 0%, #f8f9fc 95%, #ffffff 50%, #ffffff 100%);
+    }
+
+    .subscriptions__container {
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url("../img/sub-block-img_tablet.png");
+            height: 447px;
+            width: 427px;
+            background-size: 427px 447px;
+            right: -78px;
+            bottom: -34px;
+        }
+    }
+
+    .subscriptions__wrapper {
+        padding-top: 65px;
+    }
+
+    .subscriptions__wrapper h2 {
+        font-size: 37px;
+        margin-bottom: 36px;
+    }
+
+    .subscriptions__list {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+        margin-top: 45px;
+    }
+
+    .subscriptions__list-item {
+        width: 65%;
+        padding-top: 36px;
+    }
+
+    .subscriptions__list-item a {
+        padding: 24px 31px 24px 42px;
+        margin-left: -1px;
+    }
+
+    .subscriptions__toggle-list {
+        font-size: 16px;
+        max-width: 331px;
+    }
+}
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .subscriptions__wrapper {
+        max-width: 767px;
+        padding-top: 43px;
+    }
+
+    .subscriptions__wrapper h2 {
+        font-size: 28px;
+        margin-bottom: 26px;
+    }
+
+    .subscriptions__toggle,
+    .subscriptions__list {
+        @include margin-15;
+    }
+
+    .subscriptions__list {
+        margin-top: 35px;
+    }
+
+    .subscriptions__list-item {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 80px;
+
+        &--trainer {
+            &::before {
+                width: 163px;
+                height: 60px;
+                background-size: 163px 60px;
+                left: -13px;
+                top: -24px;
+            }
+        }
+
+        &--day-time {
+            &::before {
+                width: 163px;
+                height: 60px;
+                background-size: 163px 60px;
+                left: -13px;
+                top: -24px;
+            }
+        }
+
+        &--full-day {
+            &::before {
+                width: 163px;
+                height: 60px;
+                background-size: 163px 60px;
+                left: -13px;
+                top: -24px;
+            }
+        }
+    }
+
+    .subscriptions__list-item h3 {
+        font-size: 21px;
+    }
+
+    .subscriptions__list-item h3 + p {
+        font-size: 14px;
+    }
+
+    .subscriptions__container::after {
+        display: none;
+    }
+
+    .subscriptions__list-item p:last-of-type {
+        font-size: 47px;
+        margin-top: 67px;
+        margin-bottom: 60px;
+    }
 }
