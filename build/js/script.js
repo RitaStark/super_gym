@@ -1,15 +1,18 @@
 'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
 
-pageHeader.classList.remove('page-header--nojs');
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
-  }
-});
+
+(function () {
+
+  var trainerSubscription = document.querySelector('.subscriptions__trainer');
+  var subscriptionOnaMonth = document.querySelector('.subscriptions__toggle-item--1months');
+
+  trainerSubscription.addEventListener("mousemove", function () {
+    subscriptionOnaMonth.style.cssText = "border-bottom:2px solid #c00; padding-bottom:21px"; this.addEventListener("mouseout", function () {
+      subscriptionOnaMonth.style.borderBottom = "";
+    });
+  });
+
+})();
+
+
