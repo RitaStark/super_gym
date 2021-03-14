@@ -1,0 +1,22 @@
+.promo-block {
+    max-width: 1158px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+
+.promo-block__right {
+    background-image: url("../img/promo-img_desktop.jpg");
+    background-repeat: no-repeat;
+    background-color: rgb(38, 38, 117);
+    width: 660px;
+    height: 500px;
+    background-size: 660px 500px;
+}
+
+.promo-block__left {
+    flex-grow: 1;
+    max-height: 500px;
+    overflow-y: hidden;
+}
