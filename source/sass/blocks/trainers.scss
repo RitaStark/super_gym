@@ -1,0 +1,49 @@
+.trainers__wrapper {
+    max-width: 1248px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+
+    margin-bottom: 100px;
+}
+
+.trainers__item {
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 294px;
+    background-size: 260px 294px;
+}
+
+.trainers__item-1 {
+    background-image: url("../img/trainer-1__desktop.png");
+}
+
+.trainers__item-2 {
+    background-image: url("../img/trainer-2__desktop.png");
+}
+
+.trainers__item-3 {
+    background-image: url("../img/trainer-3__desktop.png");
+}
+
+.trainers__item-4 {
+    background-image: url("../img/trainer-4__desktop.png");
+}
+
+.trainers__item-5 {
+    background-image: url("../img/trainer-1__desktop.png");
+}
+
+.trainers__item-6 {
+    background-image: url("../img/trainer-2__desktop.png");
+}
+
+.trainers__item-7 {
+    background-image: url("../img/trainer-3__desktop.png");
+}
+
+.trainers__item-8 {
+    background-image: url("../img/trainer-4__desktop.png");
+}
