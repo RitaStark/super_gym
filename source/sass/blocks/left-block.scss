@@ -18,6 +18,8 @@
     font-size: 11px;
     border: 4px solid #ffffff;
     padding: 25px 113px 25px 116px;
+
+    @include roboto-font;
 }
 
 .left-block__wrapper {
@@ -179,5 +181,6 @@
     .left-block a {
         display: block;
         padding: 12px 4px 12px 49px;
+        border: 2px solid #fff;
     }
 }

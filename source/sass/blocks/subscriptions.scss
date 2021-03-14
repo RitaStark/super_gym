@@ -234,9 +234,14 @@
 // mobile ----------------------------------------------------------------------------
 
 @media (max-width: $tablet-width) {
+    .subscriptions {
+        margin-bottom: 0;
+    }
+
     .subscriptions__wrapper {
         max-width: 767px;
         padding-top: 43px;
+        padding-bottom: 130px;
     }
 
     .subscriptions__wrapper h2 {

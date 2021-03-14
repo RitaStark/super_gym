@@ -53,3 +53,31 @@
         width: 76%;
     }
 }
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .promo-block {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .promo-block__wrapper {
+        flex-direction: column;
+
+        @include margin-15;
+    }
+
+    .promo-block__right {
+        background-image: url("../img/promo-img_mobile.jpg");
+        background-repeat: no-repeat;
+        background-color: rgb(38, 38, 117);
+        width: 290px;
+        height: 292px;
+        background-size: 290px 292px;
+    }
+
+    .promo-block__left {
+        width: 100%;
+    }
+}
