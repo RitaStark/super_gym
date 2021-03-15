@@ -118,39 +118,113 @@
       <div class="subscriptions__wrapper">
         <h2>Абонементы</h2>
 
-        <div class="subscriptions__toggle">
-          <ul class="subscriptions__toggle-list">
-            <li class="subscriptions__toggle-item subscriptions__toggle-item--1months">1 месяц</li>
-            <li class="subscriptions__toggle-item subscriptions__toggle-item--6months">6 месяцев</li>
-            <li class="subscriptions__toggle-item subscriptions__toggle-item--12months">12 месяцев</li>
-          </ul>
+        <div class="subscriptions__toggle-list-wrapper">
+          <div class="subscriptions__toggle-list">
+            <button class="subscriptions__toggle-item subscriptions__toggle-item--1months"
+              onclick="openSub(event, 'oneMonth')">1 месяц</button>
+            <button class="subscriptions__toggle-item subscriptions__toggle-item--6months"
+              onclick="openSub(event, 'sixMonth')">6 месяцев</button>
+            <button class="subscriptions__toggle-item subscriptions__toggle-item--12months"
+              onclick="openSub(event, 'twelveMonth')">12 месяцев</button>
+          </div>
         </div>
 
-        <div class="subscriptions__list">
-          <div class="subscriptions__list-item subscriptions__trainer">
-            <h3>С тренером</h3>
-            <p>12 занятий</p>
-            <p><span class="subscriptions__list-item--trainer">5000</span>
-              &#8381;
-            </p>
-            <a href="#">Купить абонемент</a>
-          </div>
-          <div class="subscriptions__list-item subscriptions__day-time">
-            <h3>Дневной</h3>
-            <p>с 8:00 до 17:00</p>
-            <p><span class="subscriptions__list-item--day-time">1700</span> &#8381;
-            </p>
-            <a href="#">Купить абонемент</a>
-          </div>
-          <div class="subscriptions__list-item subscriptions__full-day">
-            <h3>Полный день</h3>
-            <p>с 8:00 до 22:00</p>
-            <p><span class="subscriptions__list-item--full-day">2700</span> &#8381;
-            </p>
-            <a href="#">Купить абонемент</a>
+        <div id="oneMonth" class="subscriptions__list">
+          <div class="subscriptions__list-wrapper">
 
+            <div class="subscriptions__list-item subscriptions__trainer">
+              <h3>С тренером</h3>
+              <p>12 занятий</p>
+              <p><span class="subscriptions__list-item--trainer">5000</span>
+                &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__list-item subscriptions__day-time">
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <p><span class="subscriptions__list-item--day-time">1700</span> &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__list-item subscriptions__full-day">
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <p><span class="subscriptions__list-item--full-day">2700</span> &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__image"></div>
           </div>
-          <div class="subscriptions__image"></div>
+        </div>
+
+
+        <div id="sixMonth" style="display: none;" class="subscriptions__list">
+          <div class="subscriptions__list-wrapper">
+
+            <div class="subscriptions__list-item subscriptions__trainer">
+              <h3>С тренером</h3>
+              <p>12 занятий</p>
+              <p><span class="subscriptions__list-item--trainer">50000</span>
+                &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__list-item subscriptions__day-time">
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <p><span class="subscriptions__list-item--day-time">17000</span> &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__list-item subscriptions__full-day">
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <p><span class="subscriptions__list-item--full-day">27000</span> &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__image"></div>
+          </div>
+        </div>
+
+
+        <div id="twelveMonth" style="display: none;" class="subscriptions__list">
+          <div class="subscriptions__list-wrapper">
+
+            <div class="subscriptions__list-item subscriptions__trainer">
+              <h3>С тренером</h3>
+              <p>12 занятий</p>
+              <p><span class="subscriptions__list-item--trainer">55000</span>
+                &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__list-item subscriptions__day-time">
+              <h3>Дневной</h3>
+              <p>с 8:00 до 17:00</p>
+              <p><span class="subscriptions__list-item--day-time">17700</span> &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__list-item subscriptions__full-day">
+              <h3>Полный день</h3>
+              <p>с 8:00 до 22:00</p>
+              <p><span class="subscriptions__list-item--full-day">27700</span> &#8381;
+              </p>
+              <a href="#">Купить абонемент</a>
+            </div>
+
+            <div class="subscriptions__image"></div>
+          </div>
         </div>
 
       </div>

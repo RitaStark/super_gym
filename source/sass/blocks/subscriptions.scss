@@ -33,8 +33,8 @@
         height: 496px;
         width: 470px;
         background-size: 474px 496px;
-        right: -71px;
-        bottom: -80px;
+        right: -182px;
+        bottom: -77px;
     }
 }
 
@@ -51,12 +51,7 @@
 .subscriptions__toggle-list {
     list-style: none;
     display: flex;
-    color: #102654;
-    opacity: 0.5;
-    font-size: 20px;
     justify-content: space-between;
-    column-gap: 20px;
-    padding-left: 0;
     max-width: 345px;
     margin: 0 auto;
     padding-bottom: 14px;
@@ -67,36 +62,48 @@
     &::after {
         content: "";
         position: absolute;
-        width: 345px;
+        width: 100%;
         height: 2px;
         background-color: rgba(120, 120, 120, 0.2);
-        top: 44px;
-        z-index: -10;
+        top: 37px;
+        z-index: 1;
     }
 }
 
-.subscriptions__list {
+.subscriptions__toggle-item {
+    padding-bottom: 14px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background-color: #f8f9fc;
+    color: #102654;
+    opacity: 0.5;
+    font-size: 19px;
+    padding-left: 0;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid red;
+        opacity: 1;
+    }
+}
+
+.subscriptions__list-wrapper {
     display: flex;
     justify-content: space-between;
     column-gap: 40px;
-    margin-top: 39px;
+    margin-top: 24px;
     margin-left: 45px;
 
     @include roboto-font;
-}
-
-.subscriptions__list-item:hover.subscriptions__list-item a {
-    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-    color: #ffffff;
-    border: none;
 }
 
 .subscriptions__list-item {
     width: 30%;
     background-color: #ffffff;
     text-align: center;
-    padding-bottom: 91px;
-    padding-top: 34px;
+    padding-bottom: 85px;
+    padding-top: 29px;
     cursor: pointer;
     z-index: 10;
     border: 7px solid transparent;
@@ -193,17 +200,12 @@
     @include roboto-font;
 }
 
-.subscriptions__list.subscriptions__trainer:hover
-    ~ .subscriptions__toggle.subscriptions__toggle-list.subscriptions__toggle-item--1months {
-    background-color: red;
-}
-
 // tablet----------------------------------------------------------------------------
 
 @media (max-width: $desktop-width) {
     .subscriptions {
         max-width: 1199px;
-        background: linear-gradient(#f8f9fc 0%, #f8f9fc 95%, #ffffff 50%, #ffffff 100%);
+        background: linear-gradient(#f8f9fc 0%, #f8f9fc 93%, #ffffff 50%, #ffffff 100%);
         margin-bottom: 7px;
     }
 
@@ -217,8 +219,8 @@
             height: 447px;
             width: 427px;
             background-size: 427px 447px;
-            right: -78px;
-            bottom: -34px;
+            right: -79px;
+            bottom: 6px;
         }
     }
 
@@ -231,16 +233,22 @@
         margin-bottom: 36px;
     }
 
-    .subscriptions__list {
+    .subscriptions__list-wrapper {
         flex-direction: column;
         align-items: center;
         row-gap: 40px;
-        margin-top: 45px;
+        margin-top: 28px;
+
+        @include margin-45;
     }
 
     .subscriptions__list-item {
         width: 65%;
-        padding-top: 36px;
+        padding-top: 35px;
+    }
+
+    .subscriptions__list-item h3 {
+        font-size: 23px;
     }
 
     .subscriptions__list-item a {
@@ -251,6 +259,15 @@
     .subscriptions__toggle-list {
         font-size: 16px;
         max-width: 331px;
+
+        &::after {
+            width: 100%;
+            top: 33px;
+        }
+    }
+
+    .subscriptions__toggle-item {
+        font-size: 17px;
     }
 }
 
@@ -272,19 +289,24 @@
         margin-bottom: 26px;
     }
 
-    .subscriptions__toggle,
-    .subscriptions__list {
+    .subscriptions__toggle-list-wrapper {
         @include margin-15;
     }
 
-    .subscriptions__list {
-        margin-top: 35px;
+    .subscriptions__list-wrapper {
+        margin-right: 22px;
+        margin-left: 22px;
+    }
+
+    .subscriptions__list-wrapper {
+        margin-top: 20px;
     }
 
     .subscriptions__list-item {
         width: 100%;
-        padding-top: 30px;
-        padding-bottom: 80px;
+        padding-top: 23px;
+        padding-bottom: 69px;
+        @include margin-15;
 
         &--trainer {
             &::before {
@@ -333,5 +355,15 @@
         font-size: 47px;
         margin-top: 67px;
         margin-bottom: 60px;
+    }
+
+    .subscriptions__toggle-item {
+        padding-bottom: 12px;
+    }
+
+    .subscriptions__toggle-list {
+        &::after {
+            width: 100%;
+        }
     }
 }

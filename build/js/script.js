@@ -1,18 +1,22 @@
 'use strict';
 
 
+function openSub(evt, subType) {
+  var i, tabcontent, tablinks;
 
-(function () {
+  tabcontent = document.querySelectorAll(".subscriptions__list");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
 
-  var trainerSubscription = document.querySelector('.subscriptions__trainer');
-  var subscriptionOnaMonth = document.querySelector('.subscriptions__toggle-item--1months');
 
-  trainerSubscription.addEventListener("mousemove", function () {
-    subscriptionOnaMonth.style.cssText = "border-bottom:2px solid #c00; padding-bottom:21px"; this.addEventListener("mouseout", function () {
-      subscriptionOnaMonth.style.borderBottom = "";
-    });
-  });
+  tablinks = document.querySelectorAll(".subscriptions__toggle-item");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("active", "");
+  }
 
-})();
 
+  document.getElementById(subType).style.display = "block";
+  evt.currentTarget.className += "active";
+}
 
