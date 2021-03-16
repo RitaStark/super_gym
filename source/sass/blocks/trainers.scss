@@ -1,11 +1,22 @@
-.trainers__wrapper {
-    max-width: 1248px;
+.trainers {
+    position: relative;
+    max-width: 1158px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    column-gap: 40px;
+}
 
+.trainers h2 {
+    text-transform: uppercase;
+    font-size: 49px;
+    font-weight: 400;
+
+    @include bebas-font;
+}
+
+.trainers__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 10px;
     margin-bottom: 100px;
 }
 
@@ -14,6 +25,42 @@
     width: 260px;
     height: 294px;
     background-size: 260px 294px;
+    position: relative;
+}
+
+.trainers__item > p {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 230px;
+    margin-bottom: 25px;
+
+    @include roboto-font;
+}
+
+.trainers__info {
+    max-height: 294px;
+    max-width: 260px;
+    color: #ffffff;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+
+    @include roboto-font;
+}
+
+.trainers__info ul {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.trainers__info ul li {
+    margin-bottom: 15px;
+}
+
+.trainers__info > p {
+    text-align: center;
+    margin-bottom: 80px;
 }
 
 .trainers__item-1 {
@@ -46,4 +93,25 @@
 
 .trainers__item-8 {
     background-image: url("../img/trainer-4__desktop.png");
+}
+
+.trainers__prev-button,
+.trainers__next-button {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    color: black;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.trainers__next-button {
+    right: -25px;
+}
+
+.trainers__prev-button {
+    left: -25px;
 }
