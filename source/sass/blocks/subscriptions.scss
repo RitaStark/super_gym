@@ -26,6 +26,7 @@
 .subscriptions__container {
     position: relative;
     overflow: hidden;
+
     &::after {
         content: "";
         position: absolute;
@@ -115,6 +116,7 @@
     &--trainer {
         position: relative;
         z-index: 1;
+
         &::before {
             content: "";
             position: absolute;
@@ -132,6 +134,7 @@
     &--day-time {
         position: relative;
         z-index: 1;
+
         &::before {
             content: "";
             position: absolute;
@@ -149,6 +152,7 @@
     &--full-day {
         position: relative;
         z-index: 1;
+
         &::before {
             content: "";
             position: absolute;
@@ -212,6 +216,7 @@
     .subscriptions__container {
         position: relative;
         overflow: hidden;
+
         &::after {
             content: "";
             position: absolute;
@@ -296,9 +301,6 @@
     .subscriptions__list-wrapper {
         margin-right: 22px;
         margin-left: 22px;
-    }
-
-    .subscriptions__list-wrapper {
         margin-top: 20px;
     }
 
@@ -306,6 +308,7 @@
         width: 100%;
         padding-top: 23px;
         padding-bottom: 69px;
+
         @include margin-15;
 
         &--trainer {

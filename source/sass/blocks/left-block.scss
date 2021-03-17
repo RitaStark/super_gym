@@ -8,6 +8,7 @@
     font-size: 18px;
     margin-top: 14px;
     margin-bottom: 71px;
+
     @include roboto-font;
 }
 
@@ -29,6 +30,7 @@
 
 .left-block__info {
     margin-top: 0;
+
     @include roboto-font;
 }
 
@@ -181,6 +183,6 @@
     .left-block a {
         display: block;
         padding: 12px 4px 12px 49px;
-        border: 2px solid #fff;
+        border: 2px solid #ffffff;
     }
 }
