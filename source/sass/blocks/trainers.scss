@@ -4,10 +4,24 @@
     margin: 0 auto;
 }
 
+.trainers__container {
+    @include margin-15;
+}
+
+.trainers__desktop {
+    display: block;
+}
+
+.trainers__tablet {
+    display: none;
+}
+
 .trainers h2 {
     text-transform: uppercase;
-    font-size: 49px;
+    font-size: 41px;
     font-weight: 400;
+    margin-top: 113px;
+    margin-bottom: 54px;
 
     @include bebas-font;
 }
@@ -16,8 +30,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    column-gap: 10px;
-    margin-bottom: 100px;
+    column-gap: 40px;
+    padding-bottom: 79px;
+    overflow: hidden;
+    // flex-wrap: nowrap;
 }
 
 .trainers__item {
@@ -26,6 +42,7 @@
     height: 294px;
     background-size: 260px 294px;
     position: relative;
+    overflow: hidden;
 }
 
 .trainers__item > p {
@@ -38,13 +55,24 @@
     @include roboto-font;
 }
 
+.trainers__item:hover .trainers__info {
+    transform: translateX(0%);
+    transition: 0.3s;
+}
+
+.trainers__item:hover .trainers__item--name {
+    display: none;
+}
+
 .trainers__info {
-    max-height: 294px;
+    height: 294px;
     max-width: 260px;
     color: #ffffff;
+    background: rgba(16, 38, 84, 0.89);
     font-size: 18px;
     position: absolute;
     top: 0;
+    transform: translateX(100%);
 
     @include roboto-font;
 }
@@ -99,7 +127,8 @@
 .trainers__next-button {
     cursor: pointer;
     position: absolute;
-    top: 60%;
+    top: 50%;
+    transform: translateY(-50%);
     width: auto;
     color: black;
     font-size: 25px;
@@ -109,10 +138,13 @@
 }
 
 .trainers__next-button {
-    right: -25px;
+    right: -57px;
 }
 
 .trainers__prev-button {
+    left: -57px;
+}
+
 // tablet----------------------------------------------------------------------------
 
 @media (max-width: $desktop-width) {
