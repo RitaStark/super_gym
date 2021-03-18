@@ -5,3 +5,11 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    display: none;
+}
