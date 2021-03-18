@@ -113,5 +113,19 @@
 }
 
 .trainers__prev-button {
-    left: -25px;
+// tablet----------------------------------------------------------------------------
+
+@media (max-width: $desktop-width) {
+    .trainers {
+        max-width: 1199px;
+        margin: 0 auto;
+    }
+
+    .trainers__desktop {
+        display: none;
+    }
+
+    .trainers__tablet {
+        display: block;
+    }
 }
