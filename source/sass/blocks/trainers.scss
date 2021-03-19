@@ -2,18 +2,7 @@
     position: relative;
     max-width: 1158px;
     margin: 0 auto;
-}
-
-.trainers__container {
-    @include margin-15;
-}
-
-.trainers__desktop {
-    display: block;
-}
-
-.trainers__tablet {
-    display: none;
+    // overflow: hidden;
 }
 
 .trainers h2 {
@@ -27,6 +16,7 @@
 }
 
 .trainers__wrapper {
+    max-width: 1158px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -145,19 +135,16 @@
     left: -57px;
 }
 
+.list {
+    display: flex;
+    flex-direction: row;
+}
+
 // tablet----------------------------------------------------------------------------
 
 @media (max-width: $desktop-width) {
     .trainers {
         max-width: 1199px;
         margin: 0 auto;
-    }
-
-    .trainers__desktop {
-        display: none;
-    }
-
-    .trainers__tablet {
-        display: block;
     }
 }
