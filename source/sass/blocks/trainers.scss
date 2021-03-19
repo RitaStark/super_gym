@@ -156,3 +156,14 @@
         padding-bottom: 65px;
     }
 }
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .trainers h2 {
+        font-size: 29px;
+        margin-top: 66px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
