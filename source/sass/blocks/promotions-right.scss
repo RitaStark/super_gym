@@ -1,0 +1,50 @@
+.promotions-right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.promotions-right__promoOne,
+.promotions-right__promoTwo {
+    color: #1c3374;
+    height: 50%;
+    border: 7px solid transparent;
+    border-image: url("../img/main-block-background_desktop.png") 30 30 round;
+    padding: 10px 28px;
+}
+
+.promotions-right__promoOne h3,
+.promotions-right__promoTwo h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.promotions-right__promoOne p,
+.promotions-right__promoTwo p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 73px;
+}
+
+.promotions-right__promoOne a,
+.promotions-right__promoTwo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #1c3374;
+    font-size: 11px;
+    margin-top: 0;
+}
+
+// tablet-------------------------------------------------------------------
+@media (max-width: $desktop-width) {
+}
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .promotions-right {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
