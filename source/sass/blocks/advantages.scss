@@ -1,3 +1,11 @@
+.advantages-mobile {
+    display: none;
+}
+
+.advantages-desktop-tablet {
+    display: block;
+}
+
 .advantages {
     background-color: #f8f9fc;
     margin-bottom: 200px;
@@ -23,7 +31,6 @@
 .advantages__wrapper {
     display: flex;
     justify-content: center;
-    // column-gap: 30px;
     flex-wrap: nowrap;
     margin: 0 80px;
 
@@ -33,12 +40,6 @@
 .advantages__item {
     display: flex;
     height: 50%;
-}
-
-.advantages__block {
-    // display: flex;
-    // flex-direction: column;
-    row-gap: 30px;
 }
 
 .advantages__block .advantages__item + .advantages__item {
@@ -98,6 +99,7 @@
 .advantages__unit h2 + p {
     margin-top: 0;
     font-size: 14px;
+    color: #2e35ac;
 }
 
 .advantages__unit h3 {
@@ -132,7 +134,6 @@
     .advantages__wrapper {
         flex-direction: row;
         column-gap: 64px;
-        // flex-wrap: wrap;
         position: relative;
         margin: 0;
     }
@@ -178,5 +179,80 @@
 
     .advantages__block .advantages__item + .advantages__item {
         padding-top: 0;
+    }
+}
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .advantages-desktop-tablet {
+        display: none;
+    }
+
+    .advantages-mobile {
+        display: block;
+    }
+
+    .advantages__container {
+        max-width: 320px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    .advantages__container > h2 {
+        font-size: 29px;
+        padding-top: 64px;
+        margin-top: 0;
+    }
+
+    .advantages__wrapper {
+        flex-direction: column;
+        justify-content: center;
+
+        @include margin-15;
+    }
+
+    .advantages__block > .advantages__item {
+        margin-bottom: 33px;
+    }
+
+    .advantages__central-item {
+        position: static;
+        margin: 0;
+        margin-bottom: 56px;
+        padding: 28px 26px 28px 28px;
+    }
+
+    .advantages__central-item p + p {
+        padding: 0 34px;
+        margin-top: 12px;
+    }
+
+    .advantages__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .advantages__unit {
+        text-align: center;
+    }
+
+    .advantages__unit h2 {
+        padding-right: 0;
+        font-size: 56px;
+        background: linear-gradient(160.61deg, #d10a42 25%, #0041ca 45.58%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .advantages__unit h2 + p {
+        font-size: 13px;
+        margin-top: -6px;
+        margin-bottom: 22px;
+    }
+
+    .advantages__unit h3 + p {
+        font-size: 14px;
+        padding: 0 29px;
     }
 }
