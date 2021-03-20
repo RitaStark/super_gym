@@ -119,10 +119,14 @@
 // tablet----------------------------------------------------------------------------
 
 @media (max-width: $desktop-width) {
+    .advantages {
+        margin-bottom: 96px;
+    }
+
     .advantages__container {
         max-width: 678px;
         margin: 0 auto;
-        padding-bottom: 71px;
+        padding-bottom: 173px;
     }
 
     .advantages__container > h2 {
@@ -173,8 +177,12 @@
         border-top: none;
     }
 
-    .advantages__block > .advantages__item {
-        margin-bottom: 157px;
+    // .advantages__block > .advantages__item {
+    //     margin-bottom: 157px;
+    // }
+
+    .advantages__block .advantages__item + .advantages__item {
+        margin-top: 212px;
     }
 
     .advantages__block .advantages__item + .advantages__item {
