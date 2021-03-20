@@ -1,0 +1,53 @@
+.free-lesson {
+    background-color: #102654;
+    width: 50%;
+    padding-left: 22px;
+    padding-bottom: 70px;
+}
+
+.free-lesson__wrapper {
+    max-width: 410px;
+    // margin: 0 auto 200px;
+}
+
+.free-lesson__wrapper h2 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 42px;
+    margin-top: 64px;
+    margin-bottom: 46px;
+    font-weight: 100;
+
+    @include bebas-font;
+}
+
+.free-lesson__form-wrap {
+    display: flex;
+    column-gap: 16px;
+}
+
+.free-lesson__form-wrap input {
+    background-color: #102654;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ffffff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    min-width: 187px;
+
+    &::placeholder {
+        color: #ffffff;
+        font-size: 12px;
+        padding-left: 0;
+    }
+}
+
+.free-lesson__submit {
+    margin-top: 28px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #102654;
+    border: 3px solid #ffffff;
+    width: 100%;
+    padding: 16px 0;
+}
