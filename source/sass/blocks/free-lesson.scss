@@ -72,6 +72,40 @@
     }
 
     .free-lesson__form-wrap input {
-        max-width: 207px;
+        width: 100%;
+    }
+}
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .free-lesson {
+        padding-left: 16px;
+        padding-bottom: 68px;
+    }
+
+    .free-lesson__wrapper {
+        margin-left: 0;
+        margin-right: 13px;
+    }
+
+    .free-lesson__wrapper h2 {
+        font-size: 29px;
+        font-weight: 100;
+        margin-top: 66px;
+    }
+
+    .free-lesson__form-wrap {
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+    }
+
+    .free-lesson__form-wrap input {
+        min-width: 289px;
+    }
+
+    .free-lesson__submit {
+        margin-top: 21px;
     }
 }

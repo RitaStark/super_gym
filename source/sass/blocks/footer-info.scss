@@ -12,3 +12,11 @@
         margin-top: 98px;
     }
 }
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .footer-info {
+        margin-top: 70px;
+    }
+}

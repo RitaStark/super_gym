@@ -87,3 +87,26 @@
         padding-left: 47px;
     }
 }
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .contacts__wrapper {
+        padding-left: 14px;
+    }
+
+    .contacts__wrapper h2 {
+        font-size: 27px;
+        margin-top: 65px;
+        margin-bottom: 29px;
+    }
+
+    .contacts__container {
+        flex-direction: column;
+    }
+
+    .contacts__unit + .contacts__unit {
+        padding-left: 0;
+        border-left: none;
+    }
+}
