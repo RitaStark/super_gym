@@ -115,3 +115,58 @@
         }
     }
 }
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .reviews {
+        max-width: 767px;
+        margin: 65px auto 0 auto;
+    }
+
+    .reviews__wrapper {
+        @include margin-15;
+    }
+
+    .reviews h2 {
+        font-size: 28px;
+        margin-bottom: 45px;
+    }
+
+    .reviews__list {
+        padding: 0 32px;
+    }
+
+    .reviews__item {
+        padding: 39px 17px 22px 15px;
+
+        &::before {
+            width: 68px;
+            height: 68px;
+            background-size: 68px 68px;
+            top: 40px;
+            left: 41px;
+        }
+    }
+
+    .reviews__item h3 {
+        margin-left: 110px;
+        margin-top: 11px;
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .reviews__item p {
+        text-align: center;
+        margin-top: 23px;
+        font-size: 14px;
+    }
+
+    .reviews__prev-button {
+        left: -2px;
+    }
+
+    .reviews__next-button {
+        right: -32px;
+    }
+}
