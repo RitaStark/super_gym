@@ -95,11 +95,37 @@
 @media (max-width: $tablet-width) {
     .promotions-left {
         flex-direction: column;
-        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        row-gap: 0;
+        min-height: 299px;
+        text-align: center;
     }
 
-    .promotions-left__info,
-    .promotions-left__image {
+    .promotions-left__info {
         width: 100%;
+        padding-bottom: 46px;
+    }
+
+    .promotions-left__info h3 {
+        margin-left: 11px;
+        margin-top: 22px;
+    }
+
+    .promotions-left__info h3 + p {
+        margin-bottom: 9px;
+    }
+
+    .promotions-left__info p + p {
+        margin-bottom: 32px;
+    }
+
+    .promotions-left__image {
+        background-image: url("../img/stock__mobile.jpg");
+        background-position: center;
+        background-size: 290px 299px;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 299px;
     }
 }

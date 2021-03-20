@@ -74,6 +74,20 @@
 @media (max-width: $tablet-width) {
     .promotions-right {
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 30px;
+        text-align: center;
+    }
+
+    .promotions-right__promoOne,
+    .promotions-right__promoTwo {
+        width: auto;
+        padding-bottom: 39px;
+        padding-top: 20px;
+    }
+
+    .promotions-right__promoOne p,
+    .promotions-right__promoTwo p {
+        line-height: 23px;
+        margin-bottom: 22px;
     }
 }

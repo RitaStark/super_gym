@@ -57,6 +57,21 @@
 
 @media (max-width: $tablet-width) {
     .promotions {
+        max-width: 767px;
+        margin: 0 auto;
         row-gap: 20px;
+    }
+
+    .promotions h2 {
+        font-size: 29px;
+        margin-bottom: 43px;
+    }
+
+    .promotions__wrapper {
+        width: auto;
+    }
+
+    .promotions__wrapper {
+        @include margin-15;
     }
 }
