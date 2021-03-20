@@ -76,3 +76,36 @@ nextButton.onclick = function () {
 };
 
 
+
+// отзывы
+
+var reviewsSlideIndex = 1;
+reviewsShowSlides(reviewsSlideIndex);
+
+// Next/previous controls
+function reviewsPlusSlides(n) {
+  reviewsShowSlides(reviewsSlideIndex += n);
+}
+
+// Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+function reviewsShowSlides(n) {
+  var i;
+  var reviews = document.querySelectorAll(".reviews__item");
+  // var dots = document.getElementsByClassName("dot");
+  if (n > reviews.length) { reviewsSlideIndex = 1 }
+  if (n < 1) { reviewsSlideIndex = reviews.length }
+  for (i = 0; i < reviews.length; i++) {
+    reviews[i].style.display = "none";
+  }
+  // for (i = 0; i < dots.length; i++) {
+  //   dots[i].className = dots[i].className.replace(" active", "");
+  // }
+  reviews[reviewsSlideIndex - 1].style.display = "block";
+  // dots[slideIndex - 1].className += " active";
+}
+
+

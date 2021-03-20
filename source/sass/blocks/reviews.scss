@@ -1,0 +1,87 @@
+.reviews {
+    max-width: 681px;
+    margin: 114px auto 0 auto;
+}
+
+.reviews__wrapper {
+    // margin-top: 50px;
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 43px;
+    color: #102654;
+    text-transform: uppercase;
+    margin-bottom: 53px;
+
+    @include bebas-font;
+}
+
+.reviews__list {
+    list-style-type: none;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.reviews__item {
+    background-color: #1c3374;
+    color: #ffffff;
+    padding: 39px 10px 41px 171px;
+    position: relative;
+
+    @include roboto-font;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-image: url("../img/review-img_desktop-tablet.png");
+        background-size: 80px 80px;
+        top: 77px;
+        left: 45px;
+    }
+}
+
+.reviews__item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.reviews__item p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 0;
+}
+
+.reviews__prev-button,
+.reviews__next-button {
+    position: absolute;
+    // padding: 25px;
+    font-size: 35px;
+}
+
+.reviews__prev-button {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 50px;
+    height: 50px;
+    color: #000000;
+}
+
+.reviews__next-button {
+    top: 50%;
+    transform: translateY(-50%);
+    right: -29px;
+    width: 50px;
+    height: 50px;
+    color: #000000;
+}
