@@ -3,10 +3,6 @@
     margin: 114px auto 0 auto;
 }
 
-.reviews__wrapper {
-    // margin-top: 50px;
-}
-
 .reviews h2 {
     text-align: center;
     font-size: 43px;
@@ -84,4 +80,38 @@
     width: 50px;
     height: 50px;
     color: #000000;
+}
+
+// tablet----------------------------------------------------------------------------
+
+@media (max-width: $desktop-width) {
+    .reviews {
+        max-width: 1199px;
+        margin: 92px auto 0 auto;
+    }
+
+    .reviews h2 {
+        font-size: 37px;
+        margin-bottom: 42px;
+        margin-left: 18px;
+    }
+
+    .reviews__list {
+        padding: 0 102px;
+    }
+
+    .reviews__prev-button {
+        left: 43px;
+    }
+
+    .reviews__next-button {
+        right: 12px;
+    }
+
+    .reviews__item {
+        &::before {
+            top: 62px;
+            left: 65px;
+        }
+    }
 }
