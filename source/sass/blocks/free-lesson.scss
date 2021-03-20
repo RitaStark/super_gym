@@ -1,7 +1,7 @@
 .free-lesson {
     background-color: #102654;
     width: 50%;
-    padding-left: 22px;
+    padding-left: 103px;
     padding-bottom: 70px;
 }
 
@@ -73,6 +73,14 @@
 
     .free-lesson__form-wrap input {
         width: 100%;
+    }
+}
+
+// tablet----------------------------------------------------------------------------
+
+@media (max-width: $desktop-width) {
+    .free-lesson {
+        padding-left: 0;
     }
 }
 
