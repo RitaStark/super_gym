@@ -31,9 +31,25 @@
 
 @media (max-width: $desktop-width) {
     .promotions {
+        max-width: 678px;
+        margin: 0 auto;
+    }
+
+    .promotions h2 {
+        font-size: 35px;
+        margin-top: 10px;
+        margin-bottom: 45px;
+    }
+
+    .promotions__wrapper {
         display: flex;
-        row-gap: 20px;
+        row-gap: 30px;
         flex-direction: column;
+    }
+
+    .promotions__item {
+        width: 100%;
+        height: auto;
     }
 }
 

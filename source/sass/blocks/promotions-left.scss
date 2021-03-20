@@ -53,10 +53,41 @@
 .promotions-left__image {
     background-image: url("../img/stock__desktop.jpg");
     background-size: 280px 482px;
+    background-repeat: no-repeat;
 }
 
 // tablet-------------------------------------------------------------------
 @media (max-width: $desktop-width) {
+    .promotions-left {
+        min-height: 462px;
+    }
+
+    .promotions-left__image {
+        background-image: url("../img/stock__tablet.jpg");
+        background-size: 399px 462px;
+        background-repeat: no-repeat;
+        width: 74%;
+    }
+
+    .promotions-left__info h3 {
+        line-height: 19px;
+        margin-top: 22px;
+        margin-left: 20px;
+    }
+
+    .promotions-left__info h3 + p {
+        margin-bottom: 15px;
+        line-height: 82px;
+    }
+
+    .promotions-left__info p + p {
+        line-height: 23px;
+        margin-bottom: 190px;
+    }
+
+    .promotions-left__info a {
+        font-size: 13px;
+    }
 }
 
 // mobile ----------------------------------------------------------------------------
