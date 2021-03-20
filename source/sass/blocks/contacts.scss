@@ -49,3 +49,41 @@
 .contacts__item + .contacts__item {
     margin-top: 25px;
 }
+
+// tablet----------------------------------------------------------------------------
+
+@media (max-width: $desktop-width) {
+    .contacts {
+        width: 100%;
+    }
+
+    .contacts__wrapper {
+        padding-left: 132px;
+    }
+
+    .contacts__container {
+        column-gap: 49px;
+    }
+
+    .contacts__wrapper h2 {
+        font-size: 34px;
+    }
+
+    .contacts__item {
+        margin-left: 0;
+    }
+
+    .contacts__item h3 {
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .contacts__item p {
+        font-size: 16px;
+    }
+
+    .contacts__unit + .contacts__unit {
+        padding-left: 47px;
+    }
+}

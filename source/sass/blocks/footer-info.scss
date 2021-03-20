@@ -3,3 +3,12 @@
     margin-top: 119px;
     margin-bottom: 200px;
 }
+
+// tablet----------------------------------------------------------------------------
+
+@media (max-width: $desktop-width) {
+    .footer-info {
+        flex-direction: column;
+        margin-top: 98px;
+    }
+}
