@@ -48,7 +48,17 @@
     .promotions-right__promoOne,
     .promotions-right__promoTwo {
         width: 50%;
+        height: auto;
         padding-bottom: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .promotions-right__promoOne a,
+    .promotions-right__promoTwo a {
+        max-width: 70px;
+        margin: 0 auto;
     }
 
     .promotions-right__promoOne p,
