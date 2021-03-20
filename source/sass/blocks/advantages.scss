@@ -193,6 +193,10 @@
 // mobile ----------------------------------------------------------------------------
 
 @media (max-width: $tablet-width) {
+    .advantages {
+        margin-bottom: 66px;
+    }
+
     .advantages-desktop-tablet {
         display: none;
     }
@@ -220,7 +224,8 @@
         @include margin-15;
     }
 
-    .advantages__block > .advantages__item {
+    .advantages__block .advantages__item + .advantages__item {
+        margin-top: 33px;
         margin-bottom: 33px;
     }
 
