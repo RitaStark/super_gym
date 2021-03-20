@@ -59,12 +59,15 @@
 // tablet-------------------------------------------------------------------
 @media (max-width: $desktop-width) {
     .promotions-left {
-        min-height: 462px;
+        min-height: 465px;
+        align-self: center;
+        width: 100%;
     }
 
     .promotions-left__image {
         background-image: url("../img/stock__tablet.jpg");
-        background-size: 399px 462px;
+        // background-size: 399px 465px;
+        background-size: cover;
         background-repeat: no-repeat;
         width: 74%;
     }
@@ -96,7 +99,7 @@
     .promotions-left {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-content: center;
         row-gap: 0;
         min-height: 299px;
         text-align: center;
@@ -123,7 +126,8 @@
     .promotions-left__image {
         background-image: url("../img/stock__mobile.jpg");
         background-position: center;
-        background-size: 290px 299px;
+        // background-size: 290px 299px;
+        background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
         min-height: 299px;
