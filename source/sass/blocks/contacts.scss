@@ -1,6 +1,7 @@
 .contacts {
     width: 50%;
     border-top: 1px solid #74819c;
+    background-color: #ffffff;
 }
 
 .contacts__wrapper {
@@ -55,6 +56,7 @@
 @media (max-width: $desktop-width) {
     .contacts {
         width: 100%;
+        padding-bottom: 51px;
     }
 
     .contacts__wrapper {
