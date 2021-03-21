@@ -8,7 +8,7 @@
     align-items: center;
     max-width: 1160px;
     margin: 0 auto;
-    padding-top: 23px;
+    padding-top: 40px;
     padding-bottom: 25px;
 }
 
@@ -34,14 +34,17 @@
 .footer__menu ul {
     column-gap: 40px;
     font-size: 13px;
-    margin-left: 70px;
+    padding-left: 0;
+    margin-left: 67px;
     margin-top: 6px;
 
     @include roboto-font;
 }
 
 .footer__social-list {
-    // background-color: red;
+    align-items: center;
+    margin-bottom: 0;
+    column-gap: 24px;
 }
 
 // tablet----------------------------------------------------------------------------
@@ -50,7 +53,8 @@
     .footer__wrapper {
         max-width: 1199px;
         margin: 0 auto 0 45px;
-        padding-top: 25px;
+        padding-top: 43px;
+        padding-bottom: 40px;
     }
 
     .footer__menu ul {
@@ -60,5 +64,10 @@
 
     .footer__logo-pic {
         width: 80px;
+    }
+
+    .footer__social-list {
+        padding-left: 0;
+        margin-right: 41px;
     }
 }
