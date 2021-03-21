@@ -58,7 +58,7 @@
     .promotions-right__promoOne a,
     .promotions-right__promoTwo a {
         max-width: 70px;
-        margin: 0 auto;
+        // margin: 0 auto;
     }
 
     .promotions-right__promoOne p,
@@ -101,5 +101,11 @@
     .promotions-right__promoTwo p {
         line-height: 23px;
         margin-bottom: 22px;
+    }
+
+    .promotions-right__promoOne a,
+    .promotions-right__promoTwo a {
+        max-width: 70px;
+        margin: 0 auto;
     }
 }
