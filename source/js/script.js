@@ -20,23 +20,25 @@ function openSub(evt, subType) {
 
 
 
+// отзывы
 
-// var slideIndex = 1;
-// showSlides(slideIndex);
+var reviewsSlideIndex = 1;
+reviewsShowSlides(reviewsSlideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function reviewsPlusSlides(n) {
+  reviewsShowSlides(reviewsSlideIndex += n);
 }
 
-function showSlides(n) {
-  var slideIndex = 1;
-  showSlides(slideIndex);
+function reviewsShowSlides(n) {
   var i;
-  var slides = document.querySelectorAll(".trainers__slides");
-  console.log(slides.length);
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 1; i < slides.length; i++) {
+  var reviews = document.querySelectorAll(".reviews__item");
+  if (n > reviews.length) { reviewsSlideIndex = 1 }
+  if (n < 1) { reviewsSlideIndex = reviews.length }
+  for (i = 0; i < reviews.length; i++) {
+    reviews[i].style.display = "none";
+  }
+  reviews[reviewsSlideIndex - 1].style.display = "block";
+}
 
     // slides[i].style.position = "relative";
     // slides[i].insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0"></span>`);
