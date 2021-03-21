@@ -42,6 +42,10 @@
     left: 436px;
 }
 
+.gym-block__video iframe {
+    border: none;
+}
+
 // tablet----------------------------------------------------------------------------
 
 @media (max-width: $desktop-width) {
