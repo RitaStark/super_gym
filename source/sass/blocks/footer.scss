@@ -55,6 +55,11 @@
     column-gap: 24px;
 }
 
+.footer__item a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 // tablet----------------------------------------------------------------------------
 
 @media (max-width: $desktop-width) {
