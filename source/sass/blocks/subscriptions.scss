@@ -95,13 +95,15 @@
     justify-content: space-between;
     column-gap: 40px;
     margin-top: 24px;
-    margin-left: 45px;
+    max-width: 1160px;
+    margin: 0 auto;
 
     @include roboto-font;
 }
 
 .subscriptions__list-item {
-    width: 30%;
+    width: 35%;
+    flex: 1 1 100%;
     background-color: #ffffff;
     text-align: center;
     padding-bottom: 85px;
@@ -275,6 +277,7 @@
 
     .subscriptions__toggle-item {
         font-size: 17px;
+        padding-bottom: 12px;
     }
 }
 

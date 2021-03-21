@@ -107,13 +107,17 @@
 
 @media (max-width: $desktop-width) {
     .left-block {
-        padding: 47px 72px 55px 44px;
+        padding: 47px 0 55px 44px;
     }
 
     .left-block > p {
         margin-top: 4px;
         font-size: 10px;
         margin-bottom: 33px;
+    }
+
+    .left-block__button {
+        margin-right: 25px;
     }
 
     .left-block__header {
@@ -128,6 +132,7 @@
 
     .left-block__info {
         margin-left: 25px;
+        margin-right: 25px;
     }
 
     .left-block__date > p {
@@ -181,8 +186,9 @@
     }
 
     .left-block a {
+        text-align: center;
         display: block;
-        padding: 12px 4px 12px 49px;
+        padding: 12px 4px 12px 0;
         border: 2px solid #ffffff;
     }
 }
