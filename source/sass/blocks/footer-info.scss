@@ -15,6 +15,7 @@
 @media (max-width: $desktop-width) {
     .footer-info {
         margin-top: 99px;
+        background: linear-gradient(to right, #102654 50%, #102654 100%);
     }
 
     .footer-info__wrapper {
@@ -26,6 +27,10 @@
 // mobile ----------------------------------------------------------------------------
 
 @media (max-width: $tablet-width) {
+    .footer-info {
+        margin-top: 71px;
+    }
+
     .footer-info__wrapper {
         margin-top: 70px;
     }
