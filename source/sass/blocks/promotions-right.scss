@@ -92,7 +92,6 @@
         flex-direction: column;
         row-gap: 30px;
         text-align: center;
-        // width: 100%;
     }
 
     .promotions-right__promoOne,
@@ -102,10 +101,21 @@
         padding-top: 20px;
     }
 
+    .promotions-right__promoTwo h3 {
+        margin-bottom: 16px;
+    }
+
     .promotions-right__promoOne p,
     .promotions-right__promoTwo p {
         line-height: 23px;
-        margin-bottom: 22px;
+    }
+
+    .promotions-right__promoOne p {
+        margin-bottom: 28px;
+    }
+
+    .promotions-right__promoTwo p {
+        margin-bottom: 25px;
     }
 
     .promotions-right__promoOne a,
