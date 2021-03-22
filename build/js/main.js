@@ -23,6 +23,8 @@ function openSub(evt, subType) {
 
 // отзывы
 
+
+
 var reviewsSlideIndex = 1;
 reviewsShowSlides(reviewsSlideIndex);
 
@@ -48,6 +50,7 @@ function reviewsShowSlides(n) {
 (function () {
 
   var width = 300;
+  var mobileWidth = 260;
   var countDesktop = 4;
   var countTablet = 2;
   var countMobile = 1;
@@ -91,7 +94,7 @@ function reviewsShowSlides(n) {
 
     function handleMobileChange(mediaQueryMobile) {
       if (mediaQueryMobile.matches) {
-        position += width * countMobile;
+        position += mobileWidth * countMobile;
         position = Math.min(position, 0);
         sliderList.style.marginLeft = position + 'px';
       }
@@ -102,6 +105,7 @@ function reviewsShowSlides(n) {
 
 
   nextButton.addEventListener("click", function () {
+
     function handleDesktopChange(mediaQueryDesktop) {
       if (mediaQueryDesktop.matches) {
         position -= width * countDesktop;
@@ -111,6 +115,7 @@ function reviewsShowSlides(n) {
     }
     mediaQueryDesktop.addEventListener("change", handleDesktopChange)
     handleDesktopChange(mediaQueryDesktop);
+
 
     function handleTabletChange(mediaQueryTablet) {
       if (mediaQueryTablet.matches) {
@@ -124,8 +129,8 @@ function reviewsShowSlides(n) {
 
     function handleMobileChange(mediaQueryMobile) {
       if (mediaQueryMobile.matches) {
-        position -= width * countMobile;
-        position = Math.max(position, -width * (sliderElements.length - countMobile));
+        position -= mobileWidth * countMobile;
+        position = Math.max(position, -mobileWidth * (sliderElements.length - countMobile));
         sliderList.style.marginLeft = position + 'px';
       }
     }
