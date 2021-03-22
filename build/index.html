@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SUPERGYM</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/bebas-neue-v2-latin-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/bebas-neue-v2-latin-regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/BebasNeueRegular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/BebasNeueRegular.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff" as="font" crossorigin="anonymous">
 </head>
@@ -123,27 +123,27 @@
         <div id="oneMonth" class="subscriptions__list">
           <div class="subscriptions__list-wrapper">
 
-            <div class="subscriptions__list-item subscriptions__trainer">
+            <div class="subscriptions__list-item">
               <h3>С тренером</h3>
               <p>12 занятий</p>
-              <p><span class="subscriptions__list-item--trainer">5000</span>
+              <p><span class="subscriptions__list-item__trainer">5000</span>
                 &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
 
-            <div class="subscriptions__list-item subscriptions__day-time">
+            <div class="subscriptions__list-item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00</p>
-              <p><span class="subscriptions__list-item--day-time">1700</span> &#8381;
+              <p><span class="subscriptions__list-item__day-time">1700</span> &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
 
-            <div class="subscriptions__list-item subscriptions__full-day">
+            <div class="subscriptions__list-item subscriptions__list-item--last">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00</p>
-              <p><span class="subscriptions__list-item--full-day">2700</span> &#8381;
+              <p><span class="subscriptions__list-item__full-day">2700</span> &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
@@ -156,27 +156,27 @@
         <div id="sixMonth" style="display: none;" class="subscriptions__list">
           <div class="subscriptions__list-wrapper">
 
-            <div class="subscriptions__list-item subscriptions__trainer">
+            <div class="subscriptions__list-item">
               <h3>С тренером</h3>
               <p>12 занятий</p>
-              <p><span class="subscriptions__list-item--trainer">50000</span>
+              <p><span class="subscriptions__list-item__trainer">50000</span>
                 &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
 
-            <div class="subscriptions__list-item subscriptions__day-time">
+            <div class="subscriptions__list-item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00</p>
-              <p><span class="subscriptions__list-item--day-time">17000</span> &#8381;
+              <p><span class="subscriptions__list-item__day-time">17000</span> &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
 
-            <div class="subscriptions__list-item subscriptions__full-day">
+            <div class="subscriptions__list-item subscriptions__list-item--last">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00</p>
-              <p><span class="subscriptions__list-item--full-day">27000</span> &#8381;
+              <p><span class="subscriptions__list-item__full-day">27000</span> &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
@@ -189,27 +189,27 @@
         <div id="twelveMonth" style="display: none;" class="subscriptions__list">
           <div class="subscriptions__list-wrapper">
 
-            <div class="subscriptions__list-item subscriptions__trainer">
+            <div class="subscriptions__list-item">
               <h3>С тренером</h3>
               <p>12 занятий</p>
-              <p><span class="subscriptions__list-item--trainer">55000</span>
+              <p><span class="subscriptions__list-item__trainer">55000</span>
                 &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
 
-            <div class="subscriptions__list-item subscriptions__day-time">
+            <div class="subscriptions__list-item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00</p>
-              <p><span class="subscriptions__list-item--day-time">17700</span> &#8381;
+              <p><span class="subscriptions__list-item__day-time">17700</span> &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
 
-            <div class="subscriptions__list-item subscriptions__full-day">
+            <div class="subscriptions__list-item subscriptions__list-item--last">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00</p>
-              <p><span class="subscriptions__list-item--full-day">27700</span> &#8381;
+              <p><span class="subscriptions__list-item__full-day">27700</span> &#8381;
               </p>
               <a href="#">Купить абонемент</a>
             </div>
@@ -268,9 +268,9 @@
     <div class="trainers__container">
       <div class="trainers__wrapper">
         <div class="trainers__list">
-          <!-- <div class="trainers__slides"> -->
+
           <div class="trainers__item trainers__item-1">
-            <p class="trainers__item--name">Анна Павлова</p>
+            <p class="trainers__item-name">Анна Павлова</p>
             <div class="trainers__info">
               <p>Анна Павлова</p>
               <ul>
@@ -280,12 +280,9 @@
               </ul>
             </div>
           </div>
-          <!-- </div> -->
 
-
-          <!-- <div class="trainers__slides"> -->
           <div class="trainers__item trainers__item-3">
-            <p class="trainers__item--name">Александр Пашков</p>
+            <p class="trainers__item-name">Александр Пашков</p>
             <div class="trainers__info">
               <p>Александр Пашков</p>
               <ul>
@@ -295,11 +292,9 @@
               </ul>
             </div>
           </div>
-          <!-- </div> -->
 
-          <!-- <div class="trainers__slides"> -->
           <div class="trainers__item trainers__item-2">
-            <p class="trainers__item--name">Алексей Лавров</p>
+            <p class="trainers__item-name">Алексей Лавров</p>
             <div class="trainers__info">
               <p>Алексей Лавров</p>
               <ul>
@@ -309,12 +304,9 @@
               </ul>
             </div>
           </div>
-          <!-- </div> -->
 
-
-          <!-- <div class="trainers__slides"> -->
           <div class="trainers__item trainers__item-4">
-            <p class="trainers__item--name">Мария Кетова</p>
+            <p class="trainers__item-name">Мария Кетова</p>
             <div class="trainers__info">
               <p>Мария Кетова</p>
               <ul>
@@ -324,12 +316,9 @@
               </ul>
             </div>
           </div>
-          <!-- </div> -->
 
-
-          <!-- <div class="trainers__slides"> -->
           <div class="trainers__item trainers__item-1">
-            <p class="trainers__item--name">Анна Павлова</p>
+            <p class="trainers__item-name">Анна Павлова</p>
             <div class="trainers__info">
               <p>Анна Павлова</p>
               <ul>
@@ -339,11 +328,9 @@
               </ul>
             </div>
           </div>
-          <!-- </div> -->
 
-          <!-- <div class="trainers__slides"> -->
           <div class="trainers__item trainers__item-3">
-            <p class="trainers__item--name">Александр Пашков</p>
+            <p class="trainers__item-name">Александр Пашков</p>
             <div class="trainers__info">
               <p>Александр Пашков</p>
               <ul>
@@ -353,11 +340,9 @@
               </ul>
             </div>
           </div>
-          <!-- </div> -->
 
-          <!-- <div class="trainers__slides"> -->
           <div class="trainers__item trainers__item-4">
-            <p class="trainers__item--name">Мария Кетова</p>
+            <p class="trainers__item-name">Мария Кетова</p>
             <div class="trainers__info">
               <p>Мария Кетова</p>
               <ul>
@@ -367,11 +352,9 @@
               </ul>
             </div>
           </div>
-          <!-- </div> -->
 
-          <!-- <div class="trainers__slides"> -->
           <div class="trainers__item trainers__item-2">
-            <p class="trainers__item--name">Алексей Лавров</p>
+            <p class="trainers__item-name">Алексей Лавров</p>
             <div class="trainers__info">
               <p>Алексей Лавров</p>
               <ul>
@@ -381,11 +364,10 @@
               </ul>
             </div>
           </div>
-          <!-- </div> -->
-
-          <a class="trainers__prev-button">&#10094;</a>
-          <a class="trainers__next-button">&#10095;</a>
+          <a class="trainers__prev-button"></a>
+          <a class="trainers__next-button"></a>
         </div>
+
       </div>
     </div>
 
@@ -718,17 +700,17 @@
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <a href="#" target="_blank">
-              <img class="footer__social-img footer__social-item--vk" src="img/icon-vk.png" alt="Иконка ВКонтакте">
+              <img class="footer__social-img footer__social-img--vk" src="img/icon-vk.png" alt="Иконка ВКонтакте">
             </a>
           </li>
           <li class="footer__social-item">
             <a href="#" target="_blank">
-              <img class="footer__social-img footer__social-item--inst" src="img/icon-insta.png" alt="Иконка Инстаграма">
+              <img class="footer__social-img footer__social-img--inst" src="img/icon-insta.png" alt="Иконка Инстаграма">
             </a>
           </li>
           <li class="footer__social-item">
             <a href="#" target="_blank">
-              <img class="footer__social-img footer__social-item--fb" src="img/icon-fb.png" alt="Иконка Фейсбука">
+              <img class="footer__social-img footer__social-img--fb" src="img/icon-fb.png" alt="Иконка Фейсбука">
             </a>
           </li>
         </ul>
