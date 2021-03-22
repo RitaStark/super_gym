@@ -10,6 +10,7 @@
     font-weight: 400;
     margin-top: 114px;
     margin-bottom: 54px;
+    color: #102654;
 
     @include bebas-font;
 }
@@ -57,7 +58,7 @@
     transition: 0.3s;
 }
 
-.trainers__item:hover .trainers__item--name {
+.trainers__item:hover .trainers__item-name {
     display: none;
 }
 
@@ -122,23 +123,33 @@
 .trainers__prev-button,
 .trainers__next-button {
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    color: black;
-    font-size: 25px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
 }
 
 .trainers__next-button {
-    right: -16px;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/arrow-right.png");
+        background-size: 16px 32px;
+        width: 16px;
+        height: 32px;
+        top: 130px;
+        right: -58px;
+    }
 }
 
 .trainers__prev-button {
-    left: -17px;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/arrow-left.png");
+        background-size: 16px 32px;
+        width: 16px;
+        height: 32px;
+        top: 130px;
+        left: -57px;
+    }
 }
 
 .list {
@@ -156,7 +167,10 @@
 
     .trainers h2 {
         margin-top: 75px;
+        margin-bottom: 41px;
         text-align: center;
+        font-size: 36px;
+        padding-top: 21px;
     }
 
     .trainers__wrapper {
@@ -170,11 +184,15 @@
     }
 
     .trainers__next-button {
-        right: 97px;
+        &::before {
+            right: 56px;
+        }
     }
 
     .trainers__prev-button {
-        left: 89px;
+        &::before {
+            left: 64px;
+        }
     }
 }
 
@@ -187,22 +205,32 @@
     }
 
     .trainers__wrapper {
-        max-width: 290px;
+        max-width: 260px;
         margin: 0 auto;
+        padding-bottom: 50px;
     }
 
     .trainers h2 {
         font-size: 29px;
         margin-top: 66px;
-        margin-bottom: 30px;
+        margin-bottom: 43px;
+        padding-top: 0;
         text-align: center;
     }
 
+    .trainers__list {
+        column-gap: 0;
+    }
+
     .trainers__next-button {
-        right: 122px;
+        &::before {
+            right: 7px;
+        }
     }
 
     .trainers__prev-button {
-        left: 91px;
+        &::before {
+            left: 7px;
+        }
     }
 }
