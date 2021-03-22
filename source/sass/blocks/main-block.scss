@@ -19,7 +19,7 @@
     justify-content: space-between;
     padding-top: 30px;
 
-    @include margin-21;
+    @include margin-28;
 }
 
 .main-block__phone {
@@ -43,7 +43,8 @@
     display: flex;
     flex-direction: column;
 
-    @include margin-21;
+    @include margin-28;
+
     @include bebas-font;
 }
 
@@ -112,12 +113,12 @@
 .main-block__picture {
     position: absolute;
     top: 51px;
-    right: 217px;
+    right: 229px;
 }
 
 .main-block__social {
     position: absolute;
-    right: 19px;
+    right: 28px;
     bottom: -41px;
 }
 
@@ -273,13 +274,21 @@
     }
 
     .main-block__button {
+        text-align: center;
         font-size: 11px;
-
         padding: 21px 47px;
     }
 
     .main-block__services-list {
         top: 171px;
         left: 0;
+    }
+
+    .main-block__button-wrap {
+        width: 100%;
+    }
+
+    .main-block__button-wrap a {
+        display: block;
     }
 }
