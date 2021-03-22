@@ -1,7 +1,7 @@
 .left-block {
     background-color: #ed0233;
     color: #ffffff;
-    padding: 88px 72px 99px 72px;
+    padding: 88px 72px 114px 72px;
 }
 
 .left-block > p {
@@ -94,7 +94,7 @@
     border-bottom: 1px solid #ffffff;
     padding-bottom: 8px;
     margin-bottom: 1px;
-    margin-top: 21px;
+    margin-top: 2px;
 }
 
 .left-block__time p + p {
@@ -107,7 +107,7 @@
 
 @media (max-width: $desktop-width) {
     .left-block {
-        padding: 47px 0 55px 44px;
+        padding: 47px 20px 55px 44px;
     }
 
     .left-block > p {
