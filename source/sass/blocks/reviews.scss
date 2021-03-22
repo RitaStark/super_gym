@@ -3,6 +3,10 @@
     margin: 114px auto 0 auto;
 }
 
+.reviews__wrapper {
+    position: relative;
+}
+
 .reviews h2 {
     text-align: center;
     font-size: 43px;
@@ -59,27 +63,41 @@
 
 .reviews__prev-button,
 .reviews__next-button {
-    position: absolute;
-    // padding: 25px;
     font-size: 35px;
 }
 
 .reviews__prev-button {
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
     width: 50px;
     height: 50px;
     color: #000000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/arrow-left.png");
+        background-size: 16px 32px;
+        width: 16px;
+        height: 32px;
+        top: 104px;
+        left: 0;
+    }
 }
 
 .reviews__next-button {
-    top: 50%;
-    transform: translateY(-50%);
-    right: -29px;
     width: 50px;
     height: 50px;
     color: #000000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/arrow-right.png");
+        background-size: 16px 32px;
+        width: 16px;
+        height: 32px;
+        top: 104px;
+        right: -7px;
+    }
 }
 
 // tablet----------------------------------------------------------------------------
@@ -98,14 +116,6 @@
 
     .reviews__list {
         padding: 0 102px;
-    }
-
-    .reviews__prev-button {
-        left: 43px;
-    }
-
-    .reviews__next-button {
-        right: 12px;
     }
 
     .reviews__item {
@@ -160,13 +170,5 @@
         text-align: center;
         margin-top: 23px;
         font-size: 14px;
-    }
-
-    .reviews__prev-button {
-        left: -2px;
-    }
-
-    .reviews__next-button {
-        right: -32px;
     }
 }
