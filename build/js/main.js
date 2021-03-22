@@ -50,7 +50,6 @@ function reviewsShowSlides(n) {
 (function () {
 
   var width = 300;
-  // var mobileWidth = 260;
   var countDesktop = 4;
   var countTablet = 2;
   var countMobile = 1;

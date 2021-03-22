@@ -1,7 +1,3 @@
-.promotions-left__image {
-    width: 50%;
-}
-
 .promotions-left {
     display: flex;
 }
@@ -51,6 +47,7 @@
 }
 
 .promotions-left__image {
+    width: 50%;
     background-image: url("../img/stock__desktop.jpg");
     background-size: 280px 482px;
     background-repeat: no-repeat;
@@ -66,7 +63,6 @@
 
     .promotions-left__image {
         background-image: url("../img/stock__tablet.jpg");
-        // background-size: 399px 465px;
         background-size: cover;
         background-repeat: no-repeat;
         width: 74%;
@@ -126,7 +122,6 @@
     .promotions-left__image {
         background-image: url("../img/stock__mobile.jpg");
         background-position: center;
-        // background-size: 290px 299px;
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;

@@ -51,7 +51,6 @@
     }
 
     .promotions__item {
-        // width: auto;
         height: auto;
     }
 }
@@ -72,9 +71,7 @@
 
     .promotions__wrapper {
         width: auto;
-    }
 
-    .promotions__wrapper {
         @include margin-15;
     }
 }

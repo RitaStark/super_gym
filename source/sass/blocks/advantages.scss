@@ -143,6 +143,7 @@
         flex-direction: row;
         column-gap: 64px;
         position: relative;
+
         @include margin-30;
     }
 
@@ -188,9 +189,6 @@
 
     .advantages__block .advantages__item + .advantages__item {
         margin-top: 212px;
-    }
-
-    .advantages__block .advantages__item + .advantages__item {
         padding-top: 0;
     }
 }
