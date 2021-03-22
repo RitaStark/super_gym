@@ -107,6 +107,10 @@
     align-self: flex-end;
 
     @include roboto-font;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .main-block__picture {

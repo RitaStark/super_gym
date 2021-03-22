@@ -21,6 +21,10 @@
     padding: 25px 113px 25px 116px;
 
     @include roboto-font;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .left-block__wrapper {

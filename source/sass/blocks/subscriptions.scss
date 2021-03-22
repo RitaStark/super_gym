@@ -76,6 +76,10 @@
         border-bottom: 2px solid red;
         opacity: 1;
     }
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .subscriptions__list {
@@ -200,6 +204,10 @@
     margin-left: 10px;
 
     @include roboto-font;
+
+    &:hover {
+        background-color: #a3b2de;
+    }
 }
 
 // tablet----------------------------------------------------------------------------
