@@ -50,7 +50,7 @@ function reviewsShowSlides(n) {
 (function () {
 
   var width = 300;
-  var mobileWidth = 260;
+  // var mobileWidth = 260;
   var countDesktop = 4;
   var countTablet = 2;
   var countMobile = 1;
@@ -94,7 +94,7 @@ function reviewsShowSlides(n) {
 
     function handleMobileChange(mediaQueryMobile) {
       if (mediaQueryMobile.matches) {
-        position += mobileWidth * countMobile;
+        position += width * countMobile;
         position = Math.min(position, 0);
         sliderList.style.marginLeft = position + 'px';
       }
@@ -129,8 +129,8 @@ function reviewsShowSlides(n) {
 
     function handleMobileChange(mediaQueryMobile) {
       if (mediaQueryMobile.matches) {
-        position -= mobileWidth * countMobile;
-        position = Math.max(position, -mobileWidth * (sliderElements.length - countMobile));
+        position -= width * countMobile;
+        position = Math.max(position, -width * (sliderElements.length - countMobile));
         sliderList.style.marginLeft = position + 'px';
       }
     }
