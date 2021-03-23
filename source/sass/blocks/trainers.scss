@@ -21,8 +21,7 @@
 }
 
 .trainers__wrapper {
-    padding-bottom: 85px;
-
+    padding-bottom: 119px;
     overflow: hidden;
 }
 
@@ -76,7 +75,8 @@
 
 .trainers__info ul {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 21px;
+    padding-left: 69px;
 }
 
 .trainers__info ul li {
@@ -85,7 +85,9 @@
 
 .trainers__info > p {
     text-align: center;
-    margin-bottom: 80px;
+    margin-top: 56px;
+    margin-bottom: 53px;
+    margin-left: -14px;
 }
 
 .trainers__item-1 {
@@ -152,9 +154,14 @@
     }
 }
 
-.list {
-    display: flex;
-    flex-direction: row;
+.trainers__toggle {
+    width: 260px;
+    height: 30px;
+    background-color: #102654;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0;
+    left: 407px;
 }
 
 // tablet----------------------------------------------------------------------------
@@ -163,6 +170,38 @@
     .trainers {
         max-width: 1199px;
         margin: 0 auto;
+    }
+
+    .trainers__item-1 {
+        background-image: url("../img/trainer-2__tablet.png");
+    }
+
+    .trainers__item-2 {
+        background-image: url("../img/trainer-2__tablet.png");
+    }
+
+    .trainers__item-3 {
+        background-image: url("../img/trainer-2__tablet.png");
+    }
+
+    .trainers__item-4 {
+        background-image: url("../img/trainer-2__tablet.png");
+    }
+
+    .trainers__item-5 {
+        background-image: url("../img/trainer-2__tablet.png");
+    }
+
+    .trainers__item-6 {
+        background-image: url("../img/trainer-2__tablet.png");
+    }
+
+    .trainers__item-7 {
+        background-image: url("../img/trainer-2__tablet.png");
+    }
+
+    .trainers__item-8 {
+        background-image: url("../img/trainer-2__tablet.png");
     }
 
     .trainers h2 {
@@ -194,6 +233,10 @@
             left: 64px;
         }
     }
+
+    .trainers__toggle {
+        display: none;
+    }
 }
 
 // mobile ----------------------------------------------------------------------------
@@ -220,6 +263,19 @@
 
     .trainers__list {
         column-gap: 40px;
+    }
+
+    .trainers__item-1,
+    .trainers__item-2,
+    .trainers__item-3,
+    .trainers__item-4,
+    .trainers__item-5,
+    .trainers__item-6,
+    .trainers__item-7,
+    .trainers__item-8 {
+        width: 226px;
+        height: 274px;
+        margin-left: 17px;
     }
 
     .trainers__next-button {
