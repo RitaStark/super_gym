@@ -1701,7 +1701,9 @@ html {
     padding: 0 102px; }
   .reviews__item::before {
     top: 62px;
-    left: 65px; } }
+    left: 65px; }
+  .reviews__next-button::before {
+    right: 0; } }
 
 @media (max-width: 767px) {
   .reviews {
