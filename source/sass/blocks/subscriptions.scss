@@ -125,7 +125,7 @@
         background-position: center;
         background-size: 203px 69px;
         left: 1px;
-        top: -28px;
+        top: -30px;
         z-index: -1;
     }
 }
@@ -143,7 +143,7 @@
         background-position: center;
         background-size: 203px 69px;
         left: -10px;
-        top: -22px;
+        top: -30px;
         z-index: -1;
     }
 }
@@ -161,7 +161,7 @@
         background-position: center;
         background-size: 203px 69px;
         left: -10px;
-        top: -22px;
+        top: -30px;
         z-index: -1;
     }
 }
@@ -191,6 +191,7 @@
 .subscriptions__list-item p:last-of-type span {
     color: #103aae;
     font-weight: 700;
+    margin-left: 11px;
 }
 
 .subscriptions__list-item a {
@@ -293,13 +294,13 @@
 
 @media (max-width: $tablet-width) {
     .subscriptions {
-        margin-bottom: 0;
+        margin-bottom: -7px;
     }
 
     .subscriptions__wrapper {
         max-width: 767px;
         padding-top: 43px;
-        padding-bottom: 102px;
+        padding-bottom: 110px;
     }
 
     .subscriptions__wrapper h2 {
