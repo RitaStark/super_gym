@@ -145,7 +145,7 @@
         column-gap: 64px;
         position: relative;
 
-        @include margin-30;
+        @include margin-45;
     }
 
     .advantages__central-item {
@@ -199,6 +199,7 @@
 @media (max-width: $tablet-width) {
     .advantages {
         margin-bottom: 59px;
+        margin-top: 18px;
     }
 
     .advantages-desktop-tablet {
@@ -217,7 +218,7 @@
 
     .advantages__container > h2 {
         font-size: 29px;
-        padding-top: 64px;
+        padding-top: 66px;
         margin-top: 0;
     }
 
@@ -239,7 +240,6 @@
         margin-bottom: 56px;
         padding: 28px 26px 28px 28px;
         min-width: 0;
-
         transform: translateY(0);
     }
 

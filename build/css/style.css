@@ -3,7 +3,7 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: local("Bebas Neue"), url("../fonts/BebasNeueRegular.woff2") format("woff2"), url("../fonts/BebasNeueRegular.woff") format("woff"); }
+  src: local("Bebas Neue"), url("../fonts/bebasneue-regular.woff2") format("woff2"), url("../fonts/bebasneue-regular.woff") format("woff"); }
 
 @font-face {
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -124,6 +124,8 @@ html {
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-family: "Roboto Condensed", "Arial", sans-serif; }
+  .main-block__button:hover {
+    opacity: 0.5; }
 
 .main-block__picture {
   position: absolute;
@@ -426,6 +428,8 @@ html {
     outline: none;
     border-bottom: 2px solid red;
     opacity: 1; }
+  .subscriptions__toggle-item:hover {
+    opacity: 1; }
 
 .subscriptions__list {
   padding-top: 25px; }
@@ -470,7 +474,7 @@ html {
     background-position: center;
     background-size: 203px 69px;
     left: 1px;
-    top: -28px;
+    top: -30px;
     z-index: -1; }
 
 .subscriptions__list-item__full-day {
@@ -485,7 +489,7 @@ html {
     background-position: center;
     background-size: 203px 69px;
     left: -10px;
-    top: -22px;
+    top: -30px;
     z-index: -1; }
 
 .subscriptions__list-item__day-time {
@@ -500,7 +504,7 @@ html {
     background-position: center;
     background-size: 203px 69px;
     left: -10px;
-    top: -22px;
+    top: -30px;
     z-index: -1; }
 
 .subscriptions__list-item--last {
@@ -523,7 +527,8 @@ html {
 
 .subscriptions__list-item p:last-of-type span {
   color: #103aae;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-left: 11px; }
 
 .subscriptions__list-item a {
   text-transform: uppercase;
@@ -535,6 +540,8 @@ html {
   padding: 25px 38px;
   margin-left: 10px;
   font-family: "Roboto Condensed", "Arial", sans-serif; }
+  .subscriptions__list-item a:hover {
+    background-color: #a3b2de; }
 
 @media (max-width: 1199px) {
   .subscriptions {
@@ -595,11 +602,11 @@ html {
 
 @media (max-width: 767px) {
   .subscriptions {
-    margin-bottom: 0; }
+    margin-bottom: -7px; }
   .subscriptions__wrapper {
     max-width: 767px;
     padding-top: 43px;
-    padding-bottom: 102px; }
+    padding-bottom: 110px; }
   .subscriptions__wrapper h2 {
     font-size: 28px;
     margin-bottom: 26px; }
@@ -739,6 +746,8 @@ html {
   border: 4px solid #ffffff;
   padding: 25px 113px 25px 116px;
   font-family: "Roboto Condensed", "Arial", sans-serif; }
+  .left-block a:hover {
+    opacity: 0.5; }
 
 .left-block__wrapper {
   display: -webkit-box;
@@ -883,7 +892,7 @@ html {
   position: relative; }
 
 .trainers__wrapper {
-  padding-bottom: 85px;
+  padding-bottom: 119px;
   overflow: hidden; }
 
 .trainers__list {
@@ -939,14 +948,17 @@ html {
 
 .trainers__info ul {
   font-size: 14px;
-  line-height: 24px; }
+  line-height: 21px;
+  padding-left: 69px; }
 
 .trainers__info ul li {
   margin-bottom: 15px; }
 
 .trainers__info > p {
   text-align: center;
-  margin-bottom: 80px; }
+  margin-top: 56px;
+  margin-bottom: 53px;
+  margin-left: -14px; }
 
 .trainers__item-1 {
   background-image: url("../img/trainer-1__desktop.png"); }
@@ -998,19 +1010,35 @@ html {
   top: 130px;
   left: -57px; }
 
-.list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+.trainers__toggle {
+  width: 260px;
+  height: 30px;
+  background-color: #102654;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  left: 407px; }
 
 @media (max-width: 1199px) {
   .trainers {
     max-width: 1199px;
     margin: 0 auto; }
+  .trainers__item-1 {
+    background-image: url("../img/trainer-2__tablet.png"); }
+  .trainers__item-2 {
+    background-image: url("../img/trainer-2__tablet.png"); }
+  .trainers__item-3 {
+    background-image: url("../img/trainer-2__tablet.png"); }
+  .trainers__item-4 {
+    background-image: url("../img/trainer-2__tablet.png"); }
+  .trainers__item-5 {
+    background-image: url("../img/trainer-2__tablet.png"); }
+  .trainers__item-6 {
+    background-image: url("../img/trainer-2__tablet.png"); }
+  .trainers__item-7 {
+    background-image: url("../img/trainer-2__tablet.png"); }
+  .trainers__item-8 {
+    background-image: url("../img/trainer-2__tablet.png"); }
   .trainers h2 {
     margin-top: 75px;
     margin-bottom: 41px;
@@ -1026,7 +1054,9 @@ html {
   .trainers__next-button::before {
     right: 56px; }
   .trainers__prev-button::before {
-    left: 64px; } }
+    left: 64px; }
+  .trainers__toggle {
+    display: none; } }
 
 @media (max-width: 767px) {
   .trainers__container {
@@ -1046,6 +1076,17 @@ html {
     -webkit-column-gap: 40px;
        -moz-column-gap: 40px;
             column-gap: 40px; }
+  .trainers__item-1,
+  .trainers__item-2,
+  .trainers__item-3,
+  .trainers__item-4,
+  .trainers__item-5,
+  .trainers__item-6,
+  .trainers__item-7,
+  .trainers__item-8 {
+    width: 226px;
+    height: 274px;
+    margin-left: 17px; }
   .trainers__next-button::before {
     right: 7px; }
   .trainers__prev-button::before {
@@ -1073,6 +1114,7 @@ html {
   color: #102654;
   padding-top: 115px;
   margin-bottom: 71px;
+  margin-top: 0;
   font-family: "Bebas Neue", "Impact", sans-serif; }
 
 .advantages__wrapper {
@@ -1177,8 +1219,8 @@ html {
        -moz-column-gap: 64px;
             column-gap: 64px;
     position: relative;
-    margin-right: 30px;
-    margin-left: 30px; }
+    margin-right: 45px;
+    margin-left: 45px; }
   .advantages__central-item {
     margin: 0;
     position: absolute;
@@ -1212,7 +1254,8 @@ html {
 
 @media (max-width: 767px) {
   .advantages {
-    margin-bottom: 59px; }
+    margin-bottom: 59px;
+    margin-top: 18px; }
   .advantages-desktop-tablet {
     display: none; }
   .advantages-mobile {
@@ -1223,7 +1266,7 @@ html {
     padding-bottom: 20px; }
   .advantages__container > h2 {
     font-size: 29px;
-    padding-top: 64px;
+    padding-top: 66px;
     margin-top: 0; }
   .advantages__wrapper {
     -webkit-box-orient: vertical;
@@ -1615,7 +1658,8 @@ html {
 
 .reviews__prev-button,
 .reviews__next-button {
-  font-size: 35px; }
+  font-size: 35px;
+  cursor: pointer; }
 
 .reviews__prev-button {
   width: 50px;
@@ -1687,7 +1731,11 @@ html {
   .reviews__item p {
     text-align: center;
     margin-top: 23px;
-    font-size: 14px; } }
+    font-size: 14px; }
+  .reviews__next-button::before,
+  .reviews__prev-button::before {
+    background-size: 16px 29px;
+    top: 153px; } }
 
 .free-lesson {
   width: 50%;
@@ -1750,7 +1798,10 @@ html {
   background-color: #102654;
   border: 3px solid #ffffff;
   width: 100%;
-  padding: 16px 0; }
+  padding: 16px 0;
+  cursor: pointer; }
+  .free-lesson__submit:hover {
+    opacity: 0.5; }
 
 @media (max-width: 1199px) {
   .free-lesson {
