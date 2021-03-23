@@ -125,6 +125,11 @@
             left: 65px;
         }
     }
+
+    .reviews__next-button {
+        &::before {
+            right: 0;
+        }
 }
 
 // mobile ----------------------------------------------------------------------------
@@ -171,5 +176,11 @@
         text-align: center;
         margin-top: 23px;
         font-size: 14px;
+    }
+
+    .reviews__next-button::before,
+    .reviews__prev-button::before {
+        background-size: 16px 29px;
+        top: 153px;
     }
 }
