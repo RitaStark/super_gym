@@ -90,6 +90,7 @@
 .advantages__unit h2 {
     font-size: 70px;
     background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+    /* stylelint-disable-next-line */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: -16px;
@@ -265,6 +266,7 @@
         padding-right: 0;
         font-size: 56px;
         background: linear-gradient(160.61deg, #d10a42 25%, #0041ca 45.58%);
+        /* stylelint-disable-next-line */
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
