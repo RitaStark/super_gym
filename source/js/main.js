@@ -1,28 +1,28 @@
 'use strict';
 
 
-
 function openSub(evt, subType) {
-  var i, tabcontent, tablinks;
+  var i;
+  var tabcontent;
+  var tablinks;
 
-  tabcontent = document.querySelectorAll(".subscriptions__list");
+  tabcontent = document.querySelectorAll('.subscriptions__list');
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    tabcontent[i].style.display = 'none';
   }
 
-  tablinks = document.querySelectorAll(".subscriptions__toggle-item");
+  tablinks = document.querySelectorAll('.subscriptions__toggle-item');
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("active", "");
+    tablinks[i].className = tablinks[i].className.replace('active', '');
   }
 
-  document.getElementById(subType).style.display = "block";
-  evt.currentTarget.className += "active";
+  document.getElementById(subType).style.display = 'block';
+  evt.currentTarget.className += 'active';
 }
 
 
 
 // отзывы
-
 
 
 var reviewsSlideIndex = 1;
@@ -34,15 +34,18 @@ function reviewsPlusSlides(n) {
 
 function reviewsShowSlides(n) {
   var i;
-  var reviews = document.querySelectorAll(".reviews__item");
-  if (n > reviews.length) { reviewsSlideIndex = 1 }
-  if (n < 1) { reviewsSlideIndex = reviews.length }
-  for (i = 0; i < reviews.length; i++) {
-    reviews[i].style.display = "none";
+  var reviews = document.querySelectorAll('.reviews__item');
+  if (n > reviews.length) {
+    reviewsSlideIndex = 1;
   }
-  reviews[reviewsSlideIndex - 1].style.display = "block";
+  if (n < 1) {
+    reviewsSlideIndex = reviews.length;
+  }
+  for (i = 0; i < reviews.length; i++) {
+    reviews[i].style.display = 'none';
+  }
+  reviews[reviewsSlideIndex - 1].style.display = 'block';
 }
-
 
 
 // тренеры
@@ -54,20 +57,20 @@ function reviewsShowSlides(n) {
   var countTablet = 2;
   var countMobile = 1;
 
-  var sliderContainer = document.querySelector(".trainers__container");
-  var sliderList = document.querySelector(".trainers__list");
-  var sliderElements = document.querySelectorAll(".trainers__item");
+  var sliderList = document.querySelector('.trainers__list');
+  var sliderElements = document.querySelectorAll('.trainers__item');
 
-  var previewButton = document.querySelector(".trainers__prev-button");
-  var nextButton = document.querySelector(".trainers__next-button");
+  var previewButton = document.querySelector('.trainers__prev-button');
+  var nextButton = document.querySelector('.trainers__next-button');
 
   var position = 0;
 
-  const mediaQueryDesktop = window.matchMedia('(min-width: 1200px)');
-  const mediaQueryTablet = window.matchMedia('(max-width: 1199px)');
-  const mediaQueryMobile = window.matchMedia('(max-width: 767px)');
+  var mediaQueryDesktop = window.matchMedia('(min-width: 1200px)');
+  var mediaQueryTablet = window.matchMedia('(max-width: 1199px)');
+  var mediaQueryMobile = window.matchMedia('(max-width: 767px)');
 
-  previewButton.addEventListener("click", function () {
+
+  previewButton.addEventListener('click', function () {
 
     function handleDesktopChange(mediaQueryDesktop) {
       if (mediaQueryDesktop.matches) {
@@ -76,7 +79,7 @@ function reviewsShowSlides(n) {
         sliderList.style.marginLeft = position + 'px';
       }
     }
-    mediaQueryDesktop.addEventListener("change", handleDesktopChange)
+    mediaQueryDesktop.addEventListener('change', handleDesktopChange);
     handleDesktopChange(mediaQueryDesktop);
 
 
@@ -87,7 +90,7 @@ function reviewsShowSlides(n) {
         sliderList.style.marginLeft = position + 'px';
       }
     }
-    mediaQueryTablet.addEventListener("change", handleTabletChange)
+    mediaQueryTablet.addEventListener('change', handleTabletChange);
     handleTabletChange(mediaQueryTablet);
 
 
@@ -98,12 +101,12 @@ function reviewsShowSlides(n) {
         sliderList.style.marginLeft = position + 'px';
       }
     }
-    mediaQueryMobile.addEventListener("change", handleMobileChange)
+    mediaQueryMobile.addEventListener('change', handleMobileChange);
     handleMobileChange(mediaQueryMobile);
   });
 
 
-  nextButton.addEventListener("click", function () {
+  nextButton.addEventListener('click', function () {
 
     function handleDesktopChange(mediaQueryDesktop) {
       if (mediaQueryDesktop.matches) {
@@ -112,7 +115,7 @@ function reviewsShowSlides(n) {
         sliderList.style.marginLeft = position + 'px';
       }
     }
-    mediaQueryDesktop.addEventListener("change", handleDesktopChange)
+    mediaQueryDesktop.addEventListener('change', handleDesktopChange);
     handleDesktopChange(mediaQueryDesktop);
 
 
@@ -123,17 +126,19 @@ function reviewsShowSlides(n) {
         sliderList.style.marginLeft = position + 'px';
       }
     }
-    mediaQueryTablet.addEventListener("change", handleTabletChange)
+    mediaQueryTablet.addEventListener('change', handleTabletChange);
     handleTabletChange(mediaQueryTablet);
 
     function handleMobileChange(mediaQueryMobile) {
       if (mediaQueryMobile.matches) {
+
         position -= width * countMobile;
         position = Math.max(position, -width * (sliderElements.length - countMobile));
         sliderList.style.marginLeft = position + 'px';
+
       }
     }
-    mediaQueryMobile.addEventListener("change", handleMobileChange)
+    mediaQueryMobile.addEventListener('change', handleMobileChange);
     handleMobileChange(mediaQueryMobile);
   });
 
