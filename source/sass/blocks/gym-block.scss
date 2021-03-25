@@ -12,12 +12,13 @@
 }
 
 .gym-block__text h2 {
-    font-size: 41px;
+    font-size: 46px;
     line-height: 49px;
+    letter-spacing: 0.07em;
     color: #102654;
     text-transform: uppercase;
     margin-top: 45px;
-    margin-bottom: 14px;
+    margin-bottom: 11px;
 
     @include bebas-font;
 }
@@ -25,7 +26,8 @@
 .gym-block__text p {
     color: rgba(16, 38, 84, 1);
     font-size: 14px;
-    line-height: 23px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
 
     @include roboto-font;
 }
@@ -33,7 +35,11 @@
 .gym-block__text h2 + p {
     font-size: 16px;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
+}
+
+.gym-block__text p + p {
+    margin-bottom: -7px;
 }
 
 .gym-block__video {

@@ -19,10 +19,11 @@
 
 .advantages__container > h2 {
     text-transform: uppercase;
-    font-size: 41px;
+    font-size: 46px;
     text-align: center;
+    letter-spacing: 0.065em;
     color: #102654;
-    padding-top: 115px;
+    padding-top: 112px;
     margin-bottom: 71px;
     margin-top: 0;
 
@@ -33,7 +34,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    margin: 0 80px;
+    margin: 0 77px 0 87px;
 
     @include roboto-font;
 }
@@ -88,14 +89,14 @@
 }
 
 .advantages__unit h2 {
-    font-size: 70px;
+    font-size: 69px;
     background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
     /* stylelint-disable-next-line */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: -16px;
-    margin-bottom: 0;
-    padding-right: 30px;
+    margin-top: -19px;
+    margin-bottom: -8px;
+    padding-right: 36px;
 }
 
 .advantages__unit h2 + p {
@@ -105,9 +106,10 @@
 }
 
 .advantages__unit h3 {
-    margin-top: 0;
+    margin-top: -5px;
     margin-bottom: 11px;
-    font-size: 18px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
     color: #102654;
 }
 
@@ -115,6 +117,7 @@
     color: #102654;
     font-size: 14px;
     line-height: 21px;
+    letter-spacing: 0.07em;
     margin-top: 0;
 }
 

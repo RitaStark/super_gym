@@ -6,10 +6,11 @@
 
 .trainers h2 {
     text-transform: uppercase;
-    font-size: 43px;
-    font-weight: 400;
+    font-size: 47px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
     margin-top: 114px;
-    margin-bottom: 54px;
+    margin-bottom: 48px;
     color: #102654;
 
     @include bebas-font;
@@ -21,7 +22,7 @@
 }
 
 .trainers__wrapper {
-    padding-bottom: 119px;
+    padding-bottom: 121px;
     overflow: hidden;
 }
 

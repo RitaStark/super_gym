@@ -8,7 +8,7 @@
     max-width: 1248px;
     margin: 0 auto;
     padding-bottom: 193px;
-    padding-top: 78px;
+    padding-top: 67px;
 }
 
 .subscriptions__container {
@@ -28,12 +28,13 @@
 }
 
 .subscriptions__wrapper h2 {
-    font-size: 42px;
+    font-size: 49px;
     color: #102654;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 41px;
+    margin-bottom: 37px;
     font-weight: 100;
+    letter-spacing: 0.03em;
 
     @include bebas-font;
 }
@@ -120,12 +121,12 @@
         content: "";
         position: absolute;
         width: 203px;
-        height: 69px;
+        height: 76px;
         background: url("../img/5000.png") no-repeat;
         background-position: center;
-        background-size: 203px 69px;
-        left: 1px;
-        top: -30px;
+        background-size: 203px 76px;
+        left: -14px;
+        top: -28px;
         z-index: -1;
     }
 }
@@ -173,7 +174,7 @@
 .subscriptions__list-item h3 {
     font-size: 26px;
     color: #102654;
-    margin-bottom: 13px;
+    margin-bottom: 10px;
 }
 
 .subscriptions__list-item h3 + p {
@@ -182,7 +183,7 @@
 }
 
 .subscriptions__list-item p:last-of-type {
-    margin-bottom: 67px;
+    margin-bottom: 64px;
     margin-top: 79px;
     font-size: 60px;
     color: #102654;
@@ -191,18 +192,17 @@
 .subscriptions__list-item p:last-of-type span {
     color: #103aae;
     font-weight: 700;
-    margin-left: 11px;
 }
 
 .subscriptions__list-item a {
     text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: 0.03em;
     color: #102654;
     border: 2px solid #102654;
     font-size: 12px;
     font-weight: 700;
-    padding: 25px 38px;
-    margin-left: 10px;
+    padding: 24px 48px;
 
     @include roboto-font;
 
