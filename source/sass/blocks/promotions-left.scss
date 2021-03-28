@@ -44,6 +44,10 @@
     border-bottom: 1px solid #ffffff;
 
     @include roboto-font;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .promotions-left__image {

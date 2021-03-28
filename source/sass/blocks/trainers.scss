@@ -126,6 +126,10 @@
 .trainers__prev-button,
 .trainers__next-button {
     cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .trainers__next-button {

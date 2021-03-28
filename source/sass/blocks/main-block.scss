@@ -25,6 +25,10 @@
 .main-block__phone {
     margin-top: -5px;
     margin-right: 2px;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .main-block__phone a {
@@ -147,6 +151,10 @@
     font-weight: 400;
 
     @include roboto-font;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 // tablet----------------------------------------------------------------------------

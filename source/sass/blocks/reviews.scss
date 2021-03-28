@@ -66,6 +66,10 @@
 .reviews__next-button {
     font-size: 35px;
     cursor: pointer;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .reviews__prev-button {

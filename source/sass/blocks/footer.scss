@@ -60,6 +60,11 @@
     column-gap: 24px;
 }
 
+.footer__item:hover,
+.footer__social-item:hover {
+    opacity: 0.5;
+}
+
 .footer__item a {
     text-decoration: none;
     color: #ffffff;
