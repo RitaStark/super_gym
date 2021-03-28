@@ -4,7 +4,6 @@
     display: flex;
     padding-top: 120px;
     padding-bottom: 232px;
-    position: relative;
 }
 
 .gym-block__text {
@@ -40,12 +39,18 @@
 
 .gym-block__text p + p {
     margin-bottom: -7px;
+    padding-right: 10px;
+}
+
+.gym-block__image {
+    max-height: 404px;
+    position: relative;
 }
 
 .gym-block__video {
     position: absolute;
-    bottom: 117px;
-    left: 436px;
+    bottom: -115px;
+    left: -64px;
 }
 
 .gym-block__video iframe {
@@ -94,7 +99,7 @@
     }
 
     .gym-block__video {
-        bottom: 95px;
+        bottom: -83px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -144,7 +149,7 @@
     }
 
     .gym-block__video {
-        bottom: 66px;
+        bottom: -185px;
         left: 50%;
         transform: translateX(-50%);
     }
