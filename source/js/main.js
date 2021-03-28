@@ -60,86 +60,103 @@ function reviewsShowSlides(n) {
   var sliderList = document.querySelector('.trainers__list');
   var sliderElements = document.querySelectorAll('.trainers__item');
 
-  var previewButton = document.querySelector('.trainers__prev-button');
+  var prevButton = document.querySelector('.trainers__prev-button');
   var nextButton = document.querySelector('.trainers__next-button');
 
-  var position = 0;
 
   var mediaQueryDesktop = window.matchMedia('(min-width: 1200px)');
-  var mediaQueryTablet = window.matchMedia('(max-width: 1199px)');
+  var mediaQueryTablet = window.matchMedia('(min-width: 768px) and (max-width: 1199px )');
   var mediaQueryMobile = window.matchMedia('(max-width: 767px)');
 
+  var currentPage = 0;
 
-  previewButton.addEventListener('click', function () {
-
-    function handleDesktopChange(mediaQueryDesktop) {
-      if (mediaQueryDesktop.matches) {
-        position += width * countDesktop;
-        position = Math.min(position, 0);
-        sliderList.style.marginLeft = position + 'px';
-      }
+  var nextPage = function () {
+    currentPage += 1;
+    var pageCount = Math.ceil(sliderElements.length / getCountPerPage());
+    if (currentPage > pageCount - 1) {
+      currentPage = 0;
     }
-    mediaQueryDesktop.addEventListener('change', handleDesktopChange);
-    handleDesktopChange(mediaQueryDesktop);
 
+    showPage(currentPage, getCountPerPage());
+  };
 
-    function handleTabletChange(mediaQueryTablet) {
-      if (mediaQueryTablet.matches) {
-        position += width * countTablet;
-        position = Math.min(position, 0);
-        sliderList.style.marginLeft = position + 'px';
-      }
+  var prevPage = function () {
+    currentPage -= 1;
+    var pageCount = Math.ceil(sliderElements.length / getCountPerPage());
+    if (currentPage < 0) {
+      currentPage = pageCount - 1;
     }
-    mediaQueryTablet.addEventListener('change', handleTabletChange);
-    handleTabletChange(mediaQueryTablet);
+    showPage(currentPage, getCountPerPage());
+  };
 
-
-    function handleMobileChange(mediaQueryMobile) {
-      if (mediaQueryMobile.matches) {
-        position += width * countMobile;
-        position = Math.min(position, 0);
-        sliderList.style.marginLeft = position + 'px';
-      }
+  var getCountPerPage = function () {
+    if (currentMode == "desktop") {
+      return countDesktop;
     }
-    mediaQueryMobile.addEventListener('change', handleMobileChange);
-    handleMobileChange(mediaQueryMobile);
+    if (currentMode == "tablet") {
+      return countTablet;
+    }
+    if (currentMode == "mobile") {
+      return countMobile;
+    }
+    console.error("not maches media")
+    return countDesktop;
+  };
+
+  var showPage = function (pageNum, countPerPage) {
+    var pos = -width * countPerPage * pageNum;
+    sliderList.style.marginLeft = pos + 'px';
+    console.log("show page", pageNum, "countperpage", countPerPage);
+  };
+
+  var currentMode;
+
+  var setCurrentMode = function (newMode) {
+    currentMode = newMode;
+    console.log("switching mode to", newMode);
+
+    currentPage = 0;
+    showPage(currentPage, getCountPerPage());
+  };
+
+  if (mediaQueryDesktop.matches) {
+    setCurrentMode("desktop");
+  } else if (mediaQueryTablet.matches) {
+    setCurrentMode("tablet");
+  } else if (mediaQueryMobile.matches) {
+    setCurrentMode("mobile");
+  } else {
+    console.error("not maches media")
+    setCurrentMode("desktop");
+  };
+  console.log("mode on start", currentMode);
+
+  mediaQueryDesktop.addEventListener('change', function (evt) {
+    if (evt.matches) {
+      setCurrentMode("desktop");
+    }
+  });
+
+  mediaQueryTablet.addEventListener('change', function (evt) {
+    if (evt.matches) {
+      setCurrentMode("tablet");
+    }
+  });
+
+  mediaQueryMobile.addEventListener('change', function (evt) {
+    if (evt.matches) {
+      setCurrentMode("mobile");
+    }
   });
 
 
+
+  prevButton.addEventListener('click', function () {
+    prevPage();
+  });
+
   nextButton.addEventListener('click', function () {
-
-    function handleDesktopChange(mediaQueryDesktop) {
-      if (mediaQueryDesktop.matches) {
-        position -= width * countDesktop;
-        position = Math.max(position, -width * (sliderElements.length - countDesktop));
-        sliderList.style.marginLeft = position + 'px';
-      }
-    }
-    mediaQueryDesktop.addEventListener('change', handleDesktopChange);
-    handleDesktopChange(mediaQueryDesktop);
-
-
-    function handleTabletChange(mediaQueryTablet) {
-      if (mediaQueryTablet.matches) {
-        position -= width * countTablet;
-        position = Math.max(position, -width * (sliderElements.length - countTablet));
-        sliderList.style.marginLeft = position + 'px';
-      }
-    }
-    mediaQueryTablet.addEventListener('change', handleTabletChange);
-    handleTabletChange(mediaQueryTablet);
-
-    function handleMobileChange(mediaQueryMobile) {
-      if (mediaQueryMobile.matches) {
-
-        position -= width * countMobile;
-        position = Math.max(position, -width * (sliderElements.length - countMobile));
-        sliderList.style.marginLeft = position + 'px';
-
-      }
-    }
-    mediaQueryMobile.addEventListener('change', handleMobileChange);
-    handleMobileChange(mediaQueryMobile);
+    nextPage();
   });
 
 })();
