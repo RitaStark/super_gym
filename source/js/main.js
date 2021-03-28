@@ -1,11 +1,11 @@
 'use strict';
 
 (function () {
-  var subOneMonth = document.querySelector(".subscriptions__toggle-item--1months");
-  var subSixMonths = document.querySelector(".subscriptions__toggle-item--6months");
-  var subTwelveMonth = document.querySelector(".subscriptions__toggle-item--12months");
+  var subOneMonth = document.querySelector('.subscriptions__toggle-item--1months');
+  var subSixMonths = document.querySelector('.subscriptions__toggle-item--6months');
+  var subTwelveMonth = document.querySelector('.subscriptions__toggle-item--12months');
 
-  subOneMonth.classList.add("subscriptions__toggle-item--active");
+  subOneMonth.classList.add('subscriptions__toggle-item--active');
 
   function openSub(evt, subType) {
     var i;
@@ -19,31 +19,31 @@
 
     tablinks = document.querySelectorAll('.subscriptions__toggle-item');
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].classList.remove("subscriptions__toggle-item--active");
+      tablinks[i].classList.remove('subscriptions__toggle-item--active');
     }
 
     document.getElementById(subType).style.display = 'block';
-    evt.currentTarget.classList.add("subscriptions__toggle-item--active");
+    evt.currentTarget.classList.add('subscriptions__toggle-item--active');
   }
 
-  subOneMonth.addEventListener("click", function (event) {
-    openSub(event, "oneMonth");
+  subOneMonth.addEventListener('click', function (event) {
+    openSub(event, 'oneMonth');
   });
 
-  subSixMonths.addEventListener("click", function (event) {
-    openSub(event, "sixMonth");
+  subSixMonths.addEventListener('click', function (event) {
+    openSub(event, 'sixMonth');
   });
 
-  subTwelveMonth.addEventListener("click", function (event) {
-    openSub(event, "twelveMonth");
+  subTwelveMonth.addEventListener('click', function (event) {
+    openSub(event, 'twelveMonth');
   });
 
 })();
 
 // отзывы
 (function () {
-  var reviewsPrevButton = document.querySelector(".reviews__prev-button");
-  var reviewsNextButton = document.querySelector(".reviews__next-button");
+  var reviewsPrevButton = document.querySelector('.reviews__prev-button');
+  var reviewsNextButton = document.querySelector('.reviews__next-button');
 
   var reviewsSlideIndex = 1;
   reviewsShowSlides(reviewsSlideIndex);
@@ -67,11 +67,11 @@
     reviews[reviewsSlideIndex - 1].style.display = 'block';
   }
 
-  reviewsPrevButton.addEventListener("click", function () {
+  reviewsPrevButton.addEventListener('click', function () {
     reviewsPlusSlides(-1);
   });
 
-  reviewsNextButton.addEventListener("click", function () {
+  reviewsNextButton.addEventListener('click', function () {
     reviewsPlusSlides(1);
   });
 
@@ -120,66 +120,60 @@
   };
 
   var getCountPerPage = function () {
-    if (currentMode == "desktop") {
+    if (currentMode === 'desktop') {
       return countDesktop;
     }
-    if (currentMode == "tablet") {
+    if (currentMode === 'tablet') {
       return countTablet;
     }
-    if (currentMode == "mobile") {
+    if (currentMode === 'mobile') {
       return countMobile;
     }
-    console.error("not maches media")
     return countDesktop;
   };
 
   var showPage = function (pageNum, countPerPage) {
     var pos = -width * countPerPage * pageNum;
     sliderList.style.marginLeft = pos + 'px';
-    console.log("show page", pageNum, "countperpage", countPerPage);
   };
 
   var currentMode;
 
   var setCurrentMode = function (newMode) {
     currentMode = newMode;
-    console.log("switching mode to", newMode);
 
     currentPage = 0;
     showPage(currentPage, getCountPerPage());
   };
 
   if (mediaQueryDesktop.matches) {
-    setCurrentMode("desktop");
+    setCurrentMode('desktop');
   } else if (mediaQueryTablet.matches) {
-    setCurrentMode("tablet");
+    setCurrentMode('tablet');
   } else if (mediaQueryMobile.matches) {
-    setCurrentMode("mobile");
+    setCurrentMode('mobile');
   } else {
-    console.error("not maches media")
-    setCurrentMode("desktop");
-  };
-  console.log("mode on start", currentMode);
+    setCurrentMode('desktop');
+  }
+
 
   mediaQueryDesktop.addEventListener('change', function (evt) {
     if (evt.matches) {
-      setCurrentMode("desktop");
+      setCurrentMode('desktop');
     }
   });
 
   mediaQueryTablet.addEventListener('change', function (evt) {
     if (evt.matches) {
-      setCurrentMode("tablet");
+      setCurrentMode('tablet');
     }
   });
 
   mediaQueryMobile.addEventListener('change', function (evt) {
     if (evt.matches) {
-      setCurrentMode("mobile");
+      setCurrentMode('mobile');
     }
   });
-
-
 
   prevButton.addEventListener('click', function () {
     prevPage();
