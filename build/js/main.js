@@ -1,48 +1,81 @@
 'use strict';
 
+(function () {
+  var subOneMonth = document.querySelector(".subscriptions__toggle-item--1months");
+  var subSixMonths = document.querySelector(".subscriptions__toggle-item--6months");
+  var subTwelveMonth = document.querySelector(".subscriptions__toggle-item--12months");
 
+  subOneMonth.classList.add("subscriptions__toggle-item--active");
 
-function openSub(evt, subType) {
-  var i, tabcontent, tablinks;
+  function openSub(evt, subType) {
+    var i;
+    var tabcontent;
+    var tablinks;
 
-  tabcontent = document.querySelectorAll(".subscriptions__list");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    tabcontent = document.querySelectorAll('.subscriptions__list');
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = 'none';
+    }
+
+    tablinks = document.querySelectorAll('.subscriptions__toggle-item');
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("subscriptions__toggle-item--active");
+    }
+
+    document.getElementById(subType).style.display = 'block';
+    evt.currentTarget.classList.add("subscriptions__toggle-item--active");
   }
 
-  tablinks = document.querySelectorAll(".subscriptions__toggle-item");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("active", "");
-  }
+  subOneMonth.addEventListener("click", function (event) {
+    openSub(event, "oneMonth");
+  });
 
-  document.getElementById(subType).style.display = "block";
-  evt.currentTarget.className += "active";
-}
+  subSixMonths.addEventListener("click", function (event) {
+    openSub(event, "sixMonth");
+  });
 
+  subTwelveMonth.addEventListener("click", function (event) {
+    openSub(event, "twelveMonth");
+  });
 
+})();
 
 // отзывы
+(function () {
+  var reviewsPrevButton = document.querySelector(".reviews__prev-button");
+  var reviewsNextButton = document.querySelector(".reviews__next-button");
 
+  var reviewsSlideIndex = 1;
+  reviewsShowSlides(reviewsSlideIndex);
 
-
-var reviewsSlideIndex = 1;
-reviewsShowSlides(reviewsSlideIndex);
-
-function reviewsPlusSlides(n) {
-  reviewsShowSlides(reviewsSlideIndex += n);
-}
-
-function reviewsShowSlides(n) {
-  var i;
-  var reviews = document.querySelectorAll(".reviews__item");
-  if (n > reviews.length) { reviewsSlideIndex = 1 }
-  if (n < 1) { reviewsSlideIndex = reviews.length }
-  for (i = 0; i < reviews.length; i++) {
-    reviews[i].style.display = "none";
+  function reviewsPlusSlides(n) {
+    reviewsShowSlides(reviewsSlideIndex += n);
   }
-  reviews[reviewsSlideIndex - 1].style.display = "block";
-}
 
+  function reviewsShowSlides(n) {
+    var i;
+    var reviews = document.querySelectorAll('.reviews__item');
+    if (n > reviews.length) {
+      reviewsSlideIndex = 1;
+    }
+    if (n < 1) {
+      reviewsSlideIndex = reviews.length;
+    }
+    for (i = 0; i < reviews.length; i++) {
+      reviews[i].style.display = 'none';
+    }
+    reviews[reviewsSlideIndex - 1].style.display = 'block';
+  }
+
+  reviewsPrevButton.addEventListener("click", function () {
+    reviewsPlusSlides(-1);
+  });
+
+  reviewsNextButton.addEventListener("click", function () {
+    reviewsPlusSlides(1);
+  });
+
+})();
 
 
 // тренеры
@@ -54,87 +87,106 @@ function reviewsShowSlides(n) {
   var countTablet = 2;
   var countMobile = 1;
 
-  var sliderContainer = document.querySelector(".trainers__container");
-  var sliderList = document.querySelector(".trainers__list");
-  var sliderElements = document.querySelectorAll(".trainers__item");
+  var sliderList = document.querySelector('.trainers__list');
+  var sliderElements = document.querySelectorAll('.trainers__item');
 
-  var previewButton = document.querySelector(".trainers__prev-button");
-  var nextButton = document.querySelector(".trainers__next-button");
+  var prevButton = document.querySelector('.trainers__prev-button');
+  var nextButton = document.querySelector('.trainers__next-button');
 
-  var position = 0;
 
-  const mediaQueryDesktop = window.matchMedia('(min-width: 1200px)');
-  const mediaQueryTablet = window.matchMedia('(max-width: 1199px)');
-  const mediaQueryMobile = window.matchMedia('(max-width: 767px)');
+  var mediaQueryDesktop = window.matchMedia('(min-width: 1200px)');
+  var mediaQueryTablet = window.matchMedia('(min-width: 768px) and (max-width: 1199px )');
+  var mediaQueryMobile = window.matchMedia('(max-width: 767px)');
 
-  previewButton.addEventListener("click", function () {
+  var currentPage = 0;
 
-    function handleDesktopChange(mediaQueryDesktop) {
-      if (mediaQueryDesktop.matches) {
-        position += width * countDesktop;
-        position = Math.min(position, 0);
-        sliderList.style.marginLeft = position + 'px';
-      }
+  var nextPage = function () {
+    currentPage += 1;
+    var pageCount = Math.ceil(sliderElements.length / getCountPerPage());
+    if (currentPage > pageCount - 1) {
+      currentPage = 0;
     }
-    mediaQueryDesktop.addEventListener("change", handleDesktopChange)
-    handleDesktopChange(mediaQueryDesktop);
 
+    showPage(currentPage, getCountPerPage());
+  };
 
-    function handleTabletChange(mediaQueryTablet) {
-      if (mediaQueryTablet.matches) {
-        position += width * countTablet;
-        position = Math.min(position, 0);
-        sliderList.style.marginLeft = position + 'px';
-      }
+  var prevPage = function () {
+    currentPage -= 1;
+    var pageCount = Math.ceil(sliderElements.length / getCountPerPage());
+    if (currentPage < 0) {
+      currentPage = pageCount - 1;
     }
-    mediaQueryTablet.addEventListener("change", handleTabletChange)
-    handleTabletChange(mediaQueryTablet);
+    showPage(currentPage, getCountPerPage());
+  };
 
-
-    function handleMobileChange(mediaQueryMobile) {
-      if (mediaQueryMobile.matches) {
-        position += width * countMobile;
-        position = Math.min(position, 0);
-        sliderList.style.marginLeft = position + 'px';
-      }
+  var getCountPerPage = function () {
+    if (currentMode == "desktop") {
+      return countDesktop;
     }
-    mediaQueryMobile.addEventListener("change", handleMobileChange)
-    handleMobileChange(mediaQueryMobile);
+    if (currentMode == "tablet") {
+      return countTablet;
+    }
+    if (currentMode == "mobile") {
+      return countMobile;
+    }
+    console.error("not maches media")
+    return countDesktop;
+  };
+
+  var showPage = function (pageNum, countPerPage) {
+    var pos = -width * countPerPage * pageNum;
+    sliderList.style.marginLeft = pos + 'px';
+    console.log("show page", pageNum, "countperpage", countPerPage);
+  };
+
+  var currentMode;
+
+  var setCurrentMode = function (newMode) {
+    currentMode = newMode;
+    console.log("switching mode to", newMode);
+
+    currentPage = 0;
+    showPage(currentPage, getCountPerPage());
+  };
+
+  if (mediaQueryDesktop.matches) {
+    setCurrentMode("desktop");
+  } else if (mediaQueryTablet.matches) {
+    setCurrentMode("tablet");
+  } else if (mediaQueryMobile.matches) {
+    setCurrentMode("mobile");
+  } else {
+    console.error("not maches media")
+    setCurrentMode("desktop");
+  };
+  console.log("mode on start", currentMode);
+
+  mediaQueryDesktop.addEventListener('change', function (evt) {
+    if (evt.matches) {
+      setCurrentMode("desktop");
+    }
+  });
+
+  mediaQueryTablet.addEventListener('change', function (evt) {
+    if (evt.matches) {
+      setCurrentMode("tablet");
+    }
+  });
+
+  mediaQueryMobile.addEventListener('change', function (evt) {
+    if (evt.matches) {
+      setCurrentMode("mobile");
+    }
   });
 
 
-  nextButton.addEventListener("click", function () {
 
-    function handleDesktopChange(mediaQueryDesktop) {
-      if (mediaQueryDesktop.matches) {
-        position -= width * countDesktop;
-        position = Math.max(position, -width * (sliderElements.length - countDesktop));
-        sliderList.style.marginLeft = position + 'px';
-      }
-    }
-    mediaQueryDesktop.addEventListener("change", handleDesktopChange)
-    handleDesktopChange(mediaQueryDesktop);
+  prevButton.addEventListener('click', function () {
+    prevPage();
+  });
 
-
-    function handleTabletChange(mediaQueryTablet) {
-      if (mediaQueryTablet.matches) {
-        position -= width * countTablet;
-        position = Math.max(position, -width * (sliderElements.length - countTablet));
-        sliderList.style.marginLeft = position + 'px';
-      }
-    }
-    mediaQueryTablet.addEventListener("change", handleTabletChange)
-    handleTabletChange(mediaQueryTablet);
-
-    function handleMobileChange(mediaQueryMobile) {
-      if (mediaQueryMobile.matches) {
-        position -= width * countMobile;
-        position = Math.max(position, -width * (sliderElements.length - countMobile));
-        sliderList.style.marginLeft = position + 'px';
-      }
-    }
-    mediaQueryMobile.addEventListener("change", handleMobileChange)
-    handleMobileChange(mediaQueryMobile);
+  nextButton.addEventListener('click', function () {
+    nextPage();
   });
 
 })();
