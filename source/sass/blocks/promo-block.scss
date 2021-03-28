@@ -6,7 +6,7 @@
 .promo-block__wrapper {
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .promo-block__right {
@@ -21,6 +21,7 @@
 .promo-block__left {
     flex-grow: 1;
     max-height: 500px;
+    max-width: 499px;
     overflow-y: hidden;
 }
 
