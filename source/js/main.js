@@ -1,54 +1,71 @@
 'use strict';
 
+(function () {
+  var subOneMonth = document.querySelector(".subscriptions__toggle-item--1months");
+  var subSixMonths = document.querySelector(".subscriptions__toggle-item--6months");
+  var subTwelveMonth = document.querySelector(".subscriptions__toggle-item--12months");
 
-function openSub(evt, subType) {
-  var i;
-  var tabcontent;
-  var tablinks;
 
-  tabcontent = document.querySelectorAll('.subscriptions__list');
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = 'none';
+  function openSub(evt, subType) {
+    var i;
+    var tabcontent;
+    var tablinks;
+
+    tabcontent = document.querySelectorAll('.subscriptions__list');
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = 'none';
+    }
+
+
+    tablinks = document.querySelectorAll('.subscriptions__toggle-item');
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace('active', '');
+    }
+
+    document.getElementById(subType).style.display = 'block';
+    evt.currentTarget.className += 'active';
   }
 
-  tablinks = document.querySelectorAll('.subscriptions__toggle-item');
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace('active', '');
-  }
+  subOneMonth.addEventListener("click", function (event) {
+    openSub(event, "oneMonth");
+  });
 
-  document.getElementById(subType).style.display = 'block';
-  evt.currentTarget.className += 'active';
-}
+  subSixMonths.addEventListener("click", function (event) {
+    openSub(event, "sixMonth");
+  });
 
+  subTwelveMonth.addEventListener("click", function (event) {
+    openSub(event, "twelveMonth");
+  });
 
+})();
 
 // отзывы
 (function () {
   var reviewsPrevButton = document.querySelector(".reviews__prev-button");
   var reviewsNextButton = document.querySelector(".reviews__next-button");
 
+  var reviewsSlideIndex = 1;
+  reviewsShowSlides(reviewsSlideIndex);
 
-var reviewsSlideIndex = 1;
-reviewsShowSlides(reviewsSlideIndex);
+  function reviewsPlusSlides(n) {
+    reviewsShowSlides(reviewsSlideIndex += n);
+  }
 
-function reviewsPlusSlides(n) {
-  reviewsShowSlides(reviewsSlideIndex += n);
-}
-
-function reviewsShowSlides(n) {
-  var i;
-  var reviews = document.querySelectorAll('.reviews__item');
-  if (n > reviews.length) {
-    reviewsSlideIndex = 1;
+  function reviewsShowSlides(n) {
+    var i;
+    var reviews = document.querySelectorAll('.reviews__item');
+    if (n > reviews.length) {
+      reviewsSlideIndex = 1;
+    }
+    if (n < 1) {
+      reviewsSlideIndex = reviews.length;
+    }
+    for (i = 0; i < reviews.length; i++) {
+      reviews[i].style.display = 'none';
+    }
+    reviews[reviewsSlideIndex - 1].style.display = 'block';
   }
-  if (n < 1) {
-    reviewsSlideIndex = reviews.length;
-  }
-  for (i = 0; i < reviews.length; i++) {
-    reviews[i].style.display = 'none';
-  }
-  reviews[reviewsSlideIndex - 1].style.display = 'block';
-}
 
   reviewsPrevButton.addEventListener("click", function () {
     reviewsPlusSlides(-1);
