@@ -43,6 +43,7 @@
         width: 80px;
         height: 80px;
         background-image: url("../img/review-img_desktop-tablet.png");
+        background-repeat: no-repeat;
         background-size: 80px 80px;
         top: 77px;
         left: 45px;
@@ -77,6 +78,7 @@
         position: absolute;
         background-image: url("../img/arrow-left.png");
         background-size: 16px 32px;
+        background-repeat: no-repeat;
         width: 16px;
         height: 32px;
         top: 104px;
@@ -94,6 +96,7 @@
         position: absolute;
         background-image: url("../img/arrow-right.png");
         background-size: 16px 32px;
+        background-repeat: no-repeat;
         width: 16px;
         height: 32px;
         top: 104px;
@@ -105,7 +108,7 @@
 
 @media (max-width: $desktop-width) {
     .reviews {
-        max-width: 1199px;
+        max-width: 90%;
         margin: 95px auto 0 auto;
     }
 
@@ -128,7 +131,13 @@
 
     .reviews__next-button {
         &::before {
-            right: 0;
+            right: 35px;
+        }
+    }
+
+    .reviews__prev-button {
+        &::before {
+            left: 35px;
         }
     }
 }
@@ -137,7 +146,7 @@
 
 @media (max-width: $tablet-width) {
     .reviews {
-        max-width: 767px;
+        max-width: 100%;
         margin: 65px auto 0 auto;
     }
 
@@ -182,6 +191,15 @@
     .reviews__next-button::before,
     .reviews__prev-button::before {
         background-size: 16px 29px;
-        top: 153px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .reviews__next-button::before {
+        right: 0;
+    }
+
+    .reviews__prev-button::before {
+        left: 0;
     }
 }
