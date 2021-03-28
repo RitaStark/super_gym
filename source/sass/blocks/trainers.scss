@@ -177,36 +177,17 @@
         margin: 0 auto;
     }
 
-    .trainers__item-1 {
-        background-image: url("../img/trainer-2__tablet.png");
-    }
-
-    .trainers__item-2 {
-        background-image: url("../img/trainer-2__tablet.png");
-    }
-
-    .trainers__item-3 {
-        background-image: url("../img/trainer-2__tablet.png");
-    }
-
-    .trainers__item-4 {
-        background-image: url("../img/trainer-2__tablet.png");
-    }
-
-    .trainers__item-5 {
-        background-image: url("../img/trainer-2__tablet.png");
-    }
-
-    .trainers__item-6 {
-        background-image: url("../img/trainer-2__tablet.png");
-    }
-
-    .trainers__item-7 {
-        background-image: url("../img/trainer-2__tablet.png");
-    }
-
+    .trainers__item-1,
+    .trainers__item-2,
+    .trainers__item-3,
+    .trainers__item-4,
+    .trainers__item-5,
+    .trainers__item-6,
+    .trainers__item-7,
     .trainers__item-8 {
-        background-image: url("../img/trainer-2__tablet.png");
+        width: 268px;
+        height: 294px;
+        background-size: 268px 294px;
     }
 
     .trainers h2 {
@@ -223,8 +204,13 @@
         margin: 0 auto;
     }
 
+    .trainers__list {
+        column-gap: 29px;
+    }
+
     .trainers__info {
         background: rgba(16, 38, 84, 0.89);
+        max-width: 269px;
     }
 
     .trainers__next-button {
@@ -268,6 +254,7 @@
 
     .trainers__list {
         column-gap: 40px;
+        margin-left: 17px;
     }
 
     .trainers__item-1,
@@ -280,7 +267,7 @@
     .trainers__item-8 {
         width: 226px;
         height: 274px;
-        margin-left: 17px;
+        background-size: 226px 274px;
     }
 
     .trainers__next-button {
