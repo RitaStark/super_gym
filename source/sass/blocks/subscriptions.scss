@@ -89,16 +89,18 @@
 
 .subscriptions__list-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1160px;
     margin: 0 auto;
+    row-gap: 20px;
+    column-gap: 40px;
+    flex-wrap: wrap;
 
     @include roboto-font;
 }
 
 .subscriptions__list-item {
-    width: 35%;
-    flex: 1 1 100%;
+    width: 30%;
     background-color: #ffffff;
     text-align: center;
     padding-bottom: 85px;
@@ -106,7 +108,6 @@
     cursor: pointer;
     z-index: 10;
     border: 7px solid transparent;
-    margin-right: 40px;
 
     &:hover {
         border-image: url("../img/main-block-background_desktop.png") 30 30 round;
@@ -322,8 +323,6 @@
         width: 100%;
         padding-top: 23px;
         padding-bottom: 69px;
-
-        @include margin-15;
     }
 
     .subscriptions__list-item__trainer {
