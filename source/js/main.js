@@ -23,6 +23,9 @@ function openSub(evt, subType) {
 
 
 // отзывы
+(function () {
+  var reviewsPrevButton = document.querySelector(".reviews__prev-button");
+  var reviewsNextButton = document.querySelector(".reviews__next-button");
 
 
 var reviewsSlideIndex = 1;
@@ -46,6 +49,16 @@ function reviewsShowSlides(n) {
   }
   reviews[reviewsSlideIndex - 1].style.display = 'block';
 }
+
+  reviewsPrevButton.addEventListener("click", function () {
+    reviewsPlusSlides(-1);
+  });
+
+  reviewsNextButton.addEventListener("click", function () {
+    reviewsPlusSlides(1);
+  });
+
+})();
 
 
 // тренеры
