@@ -1,13 +1,13 @@
 .promotions-right {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     row-gap: 40px;
 }
 
 .promotions-right__promoOne,
 .promotions-right__promoTwo {
     color: #1c3374;
-    height: 50%;
     border: 7px solid transparent;
     border-image: url("../img/main-block-background_desktop.png") 30 30 round;
     padding: 10px 28px;

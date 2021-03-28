@@ -6,6 +6,7 @@
 .promotions__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     column-gap: 40px;
     width: 100%;
 }
@@ -21,7 +22,6 @@
 }
 
 .promotions__item {
-    height: 462px;
     width: 50%;
 
     @include roboto-font;
