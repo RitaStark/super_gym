@@ -5,6 +5,7 @@
   var subSixMonths = document.querySelector(".subscriptions__toggle-item--6months");
   var subTwelveMonth = document.querySelector(".subscriptions__toggle-item--12months");
 
+  subOneMonth.classList.add("subscriptions__toggle-item--active");
 
   function openSub(evt, subType) {
     var i;
@@ -16,14 +17,13 @@
       tabcontent[i].style.display = 'none';
     }
 
-
     tablinks = document.querySelectorAll('.subscriptions__toggle-item');
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace('active', '');
+      tablinks[i].classList.remove("subscriptions__toggle-item--active");
     }
 
     document.getElementById(subType).style.display = 'block';
-    evt.currentTarget.className += 'active';
+    evt.currentTarget.classList.add("subscriptions__toggle-item--active");
   }
 
   subOneMonth.addEventListener("click", function (event) {

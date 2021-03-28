@@ -72,15 +72,15 @@
     padding-left: 0;
     cursor: pointer;
 
-    &:focus {
-        outline: none;
-        border-bottom: 2px solid red;
-        opacity: 1;
-    }
-
     &:hover {
         opacity: 1;
     }
+}
+
+.subscriptions__toggle-item--active {
+    outline: none;
+    border-bottom: 2px solid red;
+    opacity: 1;
 }
 
 .subscriptions__list {
