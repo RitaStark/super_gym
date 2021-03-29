@@ -77,13 +77,15 @@
     .footer__wrapper {
         max-width: 1199px;
         margin: 0 auto 0 45px;
-        padding-top: 43px;
+        padding-top: 41px;
         padding-bottom: 40px;
     }
 
     .footer__menu ul {
-        margin-left: 23px;
+        margin-left: 16px;
+        margin-top: 8px;
         column-gap: 29px;
+        font-size: 14px;
     }
 
     .footer__logo-pic {
@@ -92,7 +94,13 @@
 
     .footer__social-list {
         padding-left: 0;
-        margin-right: 41px;
+        margin-right: 45px;
+        margin-top: -6px;
+        column-gap: 20px;
+    }
+
+    .footer__logo {
+        margin-right: 2px;
     }
 }
 

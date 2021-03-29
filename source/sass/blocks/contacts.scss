@@ -71,7 +71,8 @@
     }
 
     .contacts__wrapper h2 {
-        font-size: 34px;
+        font-size: 41px;
+        margin-bottom: 19px;
     }
 
     .contacts__item {
@@ -81,15 +82,20 @@
     .contacts__item h3 {
         font-size: 18px;
         margin-top: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 11px;
+        letter-spacing: 0.1em;
     }
 
     .contacts__item p {
-        font-size: 16px;
+        font-size: 17px;
+    }
+
+    .contacts__item + .contacts__item {
+        margin-top: 28px;
     }
 
     .contacts__unit + .contacts__unit {
-        padding-left: 47px;
+        padding-left: 45px;
     }
 }
 

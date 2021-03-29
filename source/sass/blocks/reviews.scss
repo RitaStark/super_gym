@@ -117,17 +117,18 @@
 @media (max-width: $desktop-width) {
     .reviews {
         max-width: 90%;
-        margin: 95px auto 0 auto;
+        margin: 93px auto 0 auto;
     }
 
     .reviews h2 {
-        font-size: 37px;
+        font-size: 41px;
         margin-bottom: 42px;
-        margin-left: 18px;
+        margin-left: 0;
+        letter-spacing: 0.06em;
     }
 
     .reviews__list {
-        padding: 0 102px;
+        padding: 0 63px;
     }
 
     .reviews__item {
@@ -137,15 +138,23 @@
         }
     }
 
+    .reviews__item h3 {
+        margin-top: 17px;
+    }
+
+    .reviews__item h3 {
+        letter-spacing: 0.01em;
+    }
+
     .reviews__next-button {
         &::before {
-            right: 35px;
+            right: 6px;
         }
     }
 
     .reviews__prev-button {
         &::before {
-            left: 35px;
+            left: 6px;
         }
     }
 }

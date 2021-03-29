@@ -249,8 +249,9 @@
     }
 
     .subscriptions__wrapper h2 {
-        font-size: 37px;
-        margin-bottom: 36px;
+        font-size: 41px;
+        margin-bottom: 31px;
+        margin-top: 30px;
     }
 
     .subscriptions__list {
@@ -260,7 +261,7 @@
     .subscriptions__list-wrapper {
         flex-direction: column;
         align-items: center;
-        row-gap: 40px;
+        row-gap: 38px;
         margin-top: 28px;
 
         @include margin-45;
@@ -273,11 +274,12 @@
     }
 
     .subscriptions__list-item h3 {
-        font-size: 23px;
+        font-size: 26px;
+        margin-top: 20px;
     }
 
     .subscriptions__list-item a {
-        padding: 24px 31px 24px 42px;
+        padding: 24px 42px 24px 43px;
         margin-left: -1px;
     }
 
@@ -287,13 +289,13 @@
 
         &::after {
             width: 100%;
-            top: 33px;
+            top: 35px;
         }
     }
 
     .subscriptions__toggle-item {
-        font-size: 17px;
-        padding-bottom: 12px;
+        font-size: 16px;
+        padding-bottom: 16px;
     }
 }
 

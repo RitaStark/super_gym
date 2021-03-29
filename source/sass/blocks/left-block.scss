@@ -122,8 +122,8 @@
 
     .left-block > p {
         margin-top: 4px;
-        font-size: 10px;
-        margin-bottom: 33px;
+        font-size: 12px;
+        margin-bottom: 30px;
     }
 
     .left-block__button {
@@ -131,7 +131,7 @@
     }
 
     .left-block__header {
-        font-size: 45px;
+        font-size: 50px;
         line-height: 0;
     }
 
@@ -141,8 +141,9 @@
     }
 
     .left-block__info {
-        margin-left: 25px;
-        margin-right: 25px;
+        margin-left: 0;
+        margin-right: 32px;
+        margin-top: 0;
     }
 
     .left-block__date > p {
@@ -154,7 +155,7 @@
     }
 
     .left-block__date-wrapper h4 {
-        font-size: 24px;
+        font-size: 21px;
         margin: 0;
     }
 
@@ -164,41 +165,43 @@
     }
 
     .left-block__date-wrapper p + p {
-        margin-left: -29px;
+        margin-left: -26px;
         margin-bottom: 0;
-        line-height: 18px;
+        line-height: 12px;
     }
 
     .left-block__date-wrapper h4 + p {
         max-width: 50px;
-        margin: -3px 0 0 5px;
+        margin: -3px 0 0 4px;
 
         line-height: 20px;
     }
 
     .left-block__time {
-        margin-top: 6px;
+        margin-top: 8px;
     }
 
     .left-block__time p {
         margin-top: 1px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .left-block__time > p {
-        padding-bottom: 5px;
+        padding-bottom: 3px;
     }
 
     .left-block__time p + p {
-        font-size: 22px;
+        font-size: 24px;
         border: none;
-        margin: 0;
+        margin-right: -5px;
     }
 
     .left-block a {
+        font-size: 10px;
         text-align: center;
         display: block;
-        padding: 12px 4px 12px 0;
+        padding: 13px 9px 12px 9px;
         border: 2px solid #ffffff;
+        letter-spacing: 0.04em;
     }
 }

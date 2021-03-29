@@ -80,18 +80,28 @@
     }
 
     .gym-block__text h2 {
-        font-size: 37px;
+        font-size: 40px;
+        letter-spacing: 0.055em;
         line-height: 35px;
         margin-top: 51px;
         margin-bottom: 17px;
     }
 
     .gym-block__text h2 + p {
-        margin-bottom: 37px;
+        margin-bottom: 33px;
+    }
+
+    .gym-block__text p {
+        font-size: 16px;
+        letter-spacing: 0.01em;
+    }
+
+    .gym-block__text p + p {
+        padding-right: 0;
     }
 
     .gym-block__image {
-        margin-top: 31px;
+        margin-top: 51px;
     }
 
     .gym-block__img {
