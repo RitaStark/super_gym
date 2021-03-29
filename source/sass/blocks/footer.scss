@@ -22,11 +22,11 @@
 }
 
 .footer__logo {
-    margin-right: 67px;
+    margin-right: 60px;
 }
 
 .footer__logo-pic {
-    width: 89px;
+    width: 87px;
     height: 19px;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .footer__menu ul {
-    column-gap: 40px;
+    column-gap: 43px;
     font-size: 13px;
     padding-left: 0;
     margin-top: 6px;
@@ -57,7 +57,7 @@
 .footer__social-list {
     align-items: center;
     margin-bottom: 0;
-    column-gap: 24px;
+    column-gap: 25px;
 }
 
 .footer__item:hover,
@@ -68,6 +68,7 @@
 .footer__item a {
     text-decoration: none;
     color: #ffffff;
+    letter-spacing: 0.01em;
 }
 
 // tablet----------------------------------------------------------------------------

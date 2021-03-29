@@ -6,7 +6,7 @@
 .promotions__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    // align-items: center;
     column-gap: 40px;
     width: 100%;
 }
@@ -15,8 +15,10 @@
     text-transform: uppercase;
     text-align: center;
     color: #102654;
-    margin-bottom: 54px;
-    font-size: 41px;
+    margin-bottom: 51px;
+    margin-top: 0;
+    letter-spacing: 0.06em;
+    font-size: 46px;
 
     @include bebas-font;
 }

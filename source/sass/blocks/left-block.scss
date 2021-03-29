@@ -1,7 +1,7 @@
 .left-block {
     background-color: #ed0233;
     color: #ffffff;
-    padding: 88px 81px 114px 78px;
+    padding: 88px 76px 114px 76px;
 }
 
 .left-block > p {
@@ -32,23 +32,25 @@
 .left-block__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 4px;
+    margin-top: 0;
 }
 
 .left-block__info {
     margin-top: -5px;
+    margin-right: 5px;
 
     @include roboto-font;
 }
 
 .left-block__header {
     font-size: 85px;
-    line-height: 17px;
-    letter-spacing: 0.06em;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
     text-transform: uppercase;
     font-weight: 700;
 
-    @include bebas-font;
+    @include bebas-font-bold;
 }
 
 .left-block__header p {
@@ -65,11 +67,11 @@
 }
 
 .left-block__date > p {
-    font-size: 17px;
+    font-size: 18px;
     border-bottom: 1px solid #ffffff;
     margin-top: 0;
     margin-bottom: 2px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     max-width: 67px;
 }
 
@@ -78,19 +80,19 @@
 }
 
 .left-block__date-wrapper p + p {
-    margin-left: -39px;
+    margin-left: -36px;
+    margin-top: 13px;
     line-height: 36px;
 }
 
 .left-block__date-wrapper h4 {
-    font-size: 40px;
+    font-size: 35px;
     margin: 0;
 }
 
 .left-block__date-wrapper h4 + p {
     max-width: 50px;
-    margin: 2px 0 0 5px;
-
+    margin: 2px 0 0 9px;
     line-height: 20px;
 }
 
@@ -101,7 +103,7 @@
 .left-block__time > p {
     border-bottom: 1px solid #ffffff;
     padding-bottom: 8px;
-    margin-bottom: 1px;
+    margin-bottom: 0;
     margin-top: 2px;
 }
 

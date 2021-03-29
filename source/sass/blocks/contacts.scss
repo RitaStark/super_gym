@@ -10,21 +10,23 @@
 
 .contacts__container {
     display: flex;
-    column-gap: 66px;
+    column-gap: 64px;
 }
 
 .contacts__unit + .contacts__unit {
-    padding-left: 55px;
+    padding-left: 53px;
     border-left: 1px solid #74819c;
 }
 
 .contacts__wrapper h2 {
     text-transform: uppercase;
-    font-size: 44px;
+    font-size: 48px;
     font-weight: 100;
+    letter-spacing: 0.04em;
     margin-top: 65px;
+    margin-bottom: 31px;
 
-    @include bebas-font;
+    @include bebas-font-bold;
 }
 
 .contacts__unit {
@@ -32,7 +34,7 @@
 }
 
 .contacts__item {
-    margin-left: 5px;
+    margin-left: 4px;
 }
 
 .contacts__item h3 {
@@ -42,12 +44,14 @@
 }
 
 .contacts__item p {
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 0;
+
+    letter-spacing: 0.03em;
 }
 
 .contacts__item + .contacts__item {
-    margin-top: 25px;
+    margin-top: 23px;
 }
 
 // tablet----------------------------------------------------------------------------

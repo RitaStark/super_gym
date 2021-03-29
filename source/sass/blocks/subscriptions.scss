@@ -7,7 +7,7 @@
 .subscriptions__wrapper {
     max-width: 1248px;
     margin: 0 auto;
-    padding-bottom: 193px;
+    padding-bottom: 173px;
     padding-top: 67px;
 }
 
@@ -32,11 +32,12 @@
     color: #102654;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 37px;
+    margin-bottom: 34px;
+    margin-top: 46px;
     font-weight: 100;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.042em;
 
-    @include bebas-font;
+    @include bebas-font-bold;
 }
 
 .subscriptions__toggle-list {
@@ -77,6 +78,10 @@
     }
 }
 
+.subscriptions__toggle-item--6months {
+    margin-left: 10px;
+}
+
 .subscriptions__toggle-item--active {
     outline: none;
     border-bottom: 2px solid red;
@@ -89,7 +94,7 @@
 
 .subscriptions__list-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1160px;
     margin: 0 auto;
     row-gap: 20px;
@@ -100,11 +105,11 @@
 }
 
 .subscriptions__list-item {
-    width: 30%;
+    width: 31%;
     background-color: #ffffff;
     text-align: center;
-    padding-bottom: 85px;
-    padding-top: 29px;
+
+    padding: 29px 0 85px 0;
     cursor: pointer;
     z-index: 10;
     border: 7px solid transparent;
@@ -175,7 +180,8 @@
 .subscriptions__list-item h3 {
     font-size: 26px;
     color: #102654;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
+    margin-top: 24px;
 }
 
 .subscriptions__list-item h3 + p {
@@ -198,12 +204,12 @@
 .subscriptions__list-item a {
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.06em;
     color: #102654;
     border: 2px solid #102654;
     font-size: 12px;
     font-weight: 700;
-    padding: 24px 48px;
+    padding: 24px 45px 24px 43px;
 
     @include roboto-font;
 

@@ -50,7 +50,7 @@
     flex-direction: column;
 
     @include margin-28;
-    @include bebas-font;
+    @include bebas-font-bold;
 }
 
 .main-block__city {
@@ -58,7 +58,7 @@
     line-height: 59px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-bottom: 1px;
+    margin-bottom: 4px;
     margin-top: 48px;
     font-weight: 400;
 }
@@ -66,11 +66,11 @@
 .main-block__name {
     font-size: 111px;
     font-weight: 900;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.023em;
     line-height: 109px;
     text-transform: uppercase;
     margin-top: 0;
-    margin-bottom: 80px;
+    margin-bottom: 77px;
 }
 
 .main-block__city,
@@ -112,7 +112,7 @@
     text-transform: uppercase;
     border: 4px solid #ffffff;
     letter-spacing: 0.04em;
-    padding: 20px 53px 20px 53px;
+    padding: 20px 55px;
 
     align-self: flex-end;
 
@@ -132,7 +132,7 @@
 .main-block__social {
     position: absolute;
     right: 28px;
-    bottom: -38px;
+    bottom: -35px;
 }
 
 .main-block__social-list {
@@ -147,7 +147,7 @@
 .main-block__social-link {
     text-decoration: none;
     color: #ffffff;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
 
     @include roboto-font;

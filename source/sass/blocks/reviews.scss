@@ -1,6 +1,6 @@
 .reviews {
     max-width: 681px;
-    margin: 114px auto 0 auto;
+    margin: 111px auto 0 auto;
 }
 
 .reviews__wrapper {
@@ -9,10 +9,11 @@
 
 .reviews h2 {
     text-align: center;
-    font-size: 43px;
+    font-size: 48px;
     color: #102654;
     text-transform: uppercase;
-    margin-bottom: 53px;
+    margin-bottom: 50px;
+    letter-spacing: 0.05em;
 
     @include bebas-font;
 }
@@ -51,15 +52,18 @@
 }
 
 .reviews__item h3 {
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 700;
     margin-bottom: 16px;
+    letter-spacing: 0.023em;
+    margin-top: 19px;
 }
 
 .reviews__item p {
     font-size: 16px;
     line-height: 22px;
     margin-top: 0;
+    padding-right: 49px;
 }
 
 .reviews__prev-button,
@@ -86,7 +90,7 @@
         width: 16px;
         height: 32px;
         top: 104px;
-        left: 0;
+        left: 4px;
     }
 }
 
@@ -104,7 +108,7 @@
         width: 16px;
         height: 32px;
         top: 104px;
-        right: -7px;
+        right: 4px;
     }
 }
 

@@ -12,7 +12,7 @@
 .promotions-left__info h3 {
     font-size: 28px;
     margin-bottom: 0;
-    margin-top: 15px;
+    margin-top: 13px;
 }
 
 .promotions-left__info h3,
@@ -25,21 +25,23 @@
 .promotions-left__info h3 + p {
     font-size: 70px;
     margin-top: 0;
-    margin-bottom: 12px;
-    line-height: 82px;
+    margin-bottom: 22px;
+    line-height: 68px;
 }
 
 .promotions-left__info p + p {
     font-size: 18px;
     margin-top: 0;
-    margin-bottom: 192px;
+    margin-bottom: 188px;
+    line-height: 24px;
+    padding-right: 19px;
 }
 
 .promotions-left__info a {
     text-decoration: none;
     text-transform: uppercase;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     border-bottom: 1px solid #ffffff;
 
@@ -53,7 +55,9 @@
 .promotions-left__image {
     width: 50%;
     background-image: url("../img/stock__desktop.jpg");
-    background-size: 280px 482px;
+    width: 280px;
+    height: 462px;
+    background-size: 280px 462px;
     background-repeat: no-repeat;
 }
 
