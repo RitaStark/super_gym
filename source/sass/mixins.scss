@@ -2,6 +2,10 @@
     font-family: "Bebas Neue", "Impact", sans-serif;
 }
 
+@mixin bebas-font-bold {
+    font-family: "Bebas Neue bold", "Impact", sans-serif;
+}
+
 @mixin roboto-font {
     font-family: "Roboto Condensed", "Arial", sans-serif;
 }

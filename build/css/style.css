@@ -20,12 +20,10 @@
   src: url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff") format("woff"); }
 
 body {
-  margin: 0;
-  overflow-x: hidden; }
+  margin: 0; }
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden; }
+  scroll-behavior: smooth; }
 
 * {
   -webkit-box-sizing: border-box;
