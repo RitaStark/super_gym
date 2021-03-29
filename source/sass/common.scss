@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 html {
@@ -10,6 +12,15 @@ html {
     box-sizing: border-box;
 }
 
-.visually-hidden {
-    display: none;
+html,
+body {
+    height: 100%;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+.main-container {
+    flex: 1 0 auto;
 }
