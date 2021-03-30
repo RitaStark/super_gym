@@ -951,7 +951,8 @@ footer {
 
 .trainers {
   max-width: 1158px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 121px; }
 
 .trainers h2 {
   text-transform: uppercase;
@@ -968,7 +969,6 @@ footer {
   position: relative; }
 
 .trainers__wrapper {
-  padding-bottom: 121px;
   overflow: hidden; }
 
 .trainers__list {
@@ -1068,25 +1068,37 @@ footer {
   .trainers__next-button:hover {
     opacity: 0.5; }
 
-.trainers__next-button::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/arrow-right.png");
-  background-size: 16px 32px;
-  width: 16px;
-  height: 32px;
-  top: 130px;
-  right: -57px; }
+.trainers__next-button {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: transparent;
+  border: none; }
+  .trainers__next-button::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/arrow-right.png");
+    background-size: 16px 32px;
+    width: 16px;
+    height: 32px;
+    top: 10px;
+    right: 15px; }
 
-.trainers__prev-button::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/arrow-left.png");
-  background-size: 16px 32px;
-  width: 16px;
-  height: 32px;
-  top: 130px;
-  left: -57px; }
+.trainers__prev-button {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: transparent;
+  border: none; }
+  .trainers__prev-button::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/arrow-left.png");
+    background-size: 16px 32px;
+    width: 16px;
+    height: 32px;
+    top: 10px;
+    left: 15px; }
 
 .trainers__toggle {
   width: 260px;
@@ -1096,6 +1108,20 @@ footer {
   position: absolute;
   bottom: 0;
   left: 407px; }
+
+.trainers__prev-wrap {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -50px; }
+
+.trainers__next-wrap {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -50px; }
 
 @media (max-width: 1199px) {
   .trainers {
@@ -1781,40 +1807,50 @@ footer {
 .reviews__prev-button,
 .reviews__next-button {
   font-size: 35px;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: none;
+  background-color: transparent; }
   .reviews__prev-button:hover,
   .reviews__next-button:hover {
     opacity: 0.5; }
 
-.reviews__prev-button {
-  width: 50px;
-  height: 50px;
-  color: #000000; }
-  .reviews__prev-button::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/arrow-left.png");
-    background-size: 16px 32px;
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 32px;
-    top: 104px;
-    left: 4px; }
+.reviews__prev-button::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/arrow-left.png");
+  background-size: 16px 32px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 32px;
+  top: 10px;
+  right: 15px; }
 
-.reviews__next-button {
-  width: 50px;
-  height: 50px;
-  color: #000000; }
-  .reviews__next-button::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/arrow-right.png");
-    background-size: 16px 32px;
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 32px;
-    top: 104px;
-    right: 4px; }
+.reviews__next-button::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/arrow-right.png");
+  background-size: 16px 32px;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 32px;
+  top: 10px;
+  right: 15px; }
+
+.reviews__prev-wrapper,
+.reviews__next-wrapper {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+.reviews__prev-wrapper {
+  left: 0; }
+
+.reviews__next-wrapper {
+  right: 0; }
 
 @media (max-width: 1199px) {
   .reviews {
