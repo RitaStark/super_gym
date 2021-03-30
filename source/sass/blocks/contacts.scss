@@ -11,11 +11,23 @@
 .contacts__container {
     display: flex;
     column-gap: 64px;
+    position: relative;
+    margin-right: 15px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 102px;
+        background-color: #74819c;
+        top: 12px;
+        left: 50%;
+    }
 }
 
 .contacts__unit + .contacts__unit {
     padding-left: 53px;
-    border-left: 1px solid #74819c;
+    // border-left: 1px solid #74819c;
 }
 
 .contacts__wrapper h2 {
