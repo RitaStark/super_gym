@@ -1126,7 +1126,8 @@ footer {
 @media (max-width: 1199px) {
   .trainers {
     max-width: 1199px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-bottom: 65px; }
   .trainers__container {
     max-width: 687px;
     margin: 0 auto; }
@@ -1149,7 +1150,6 @@ footer {
     padding-top: 21px; }
   .trainers__wrapper {
     max-width: 565px;
-    padding-bottom: 65px;
     margin: 0 auto; }
   .trainers__list {
     -webkit-column-gap: 29px;
@@ -1163,7 +1163,9 @@ footer {
   .trainers__prev-button::before {
     left: 0; }
   .trainers__toggle {
-    display: none; } }
+    display: none; }
+  .trainers__next-wrap {
+    right: 5px; } }
 
 @media (max-width: 767px) {
   .trainers__container {
@@ -1244,7 +1246,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   height: 50%;
-  padding-left: 27px; }
+  padding-left: 2px; }
 
 .advantages__block .advantages__item + .advantages__item {
   padding-top: 80px; }
@@ -1708,7 +1710,8 @@ footer {
   .promotions-right__promoOne a,
   .promotions-right__promoTwo a {
     max-width: 70px;
-    margin-top: 3px; }
+    margin-top: 3px;
+    letter-spacing: 0.05em; }
   .promotions-right__promoOne p,
   .promotions-right__promoTwo p {
     line-height: 20px; }
@@ -1881,7 +1884,11 @@ footer {
   .reviews__next-button::before {
     right: 6px; }
   .reviews__prev-button::before {
-    left: 6px; } }
+    left: 6px; }
+  .reviews__next-wrapper {
+    right: 0; }
+  .reviews__prev-wrapper {
+    left: 0; } }
 
 @media (max-width: 767px) {
   .reviews {
@@ -2015,6 +2022,9 @@ footer {
   .free-lesson__wrapper {
     max-width: 503px;
     margin: 0 auto; }
+  .free-lesson__wrapper h2 {
+    margin-top: 65px;
+    margin-bottom: 35px; }
   .free-lesson__form {
     margin-right: 29px; }
   .free-lesson__form-wrap {
@@ -2147,10 +2157,15 @@ footer {
   .contacts__container {
     -webkit-column-gap: 49px;
        -moz-column-gap: 49px;
-            column-gap: 49px; }
+            column-gap: 49px;
+    margin-right: 102px; }
+    .contacts__container::after {
+      top: 20px;
+      height: 127px; }
   .contacts__wrapper h2 {
     font-size: 41px;
-    margin-bottom: 19px; }
+    margin-bottom: 20px;
+    margin-top: 64px; }
   .contacts__item {
     margin-left: 0; }
   .contacts__item h3 {

@@ -27,7 +27,6 @@
 
 .contacts__unit + .contacts__unit {
     padding-left: 53px;
-    // border-left: 1px solid #74819c;
 }
 
 .contacts__wrapper h2 {
@@ -80,11 +79,18 @@
 
     .contacts__container {
         column-gap: 49px;
+        margin-right: 102px;
+
+        &::after {
+            top: 20px;
+            height: 127px;
+        }
     }
 
     .contacts__wrapper h2 {
         font-size: 41px;
-        margin-bottom: 19px;
+        margin-bottom: 20px;
+        margin-top: 64px;
     }
 
     .contacts__item {

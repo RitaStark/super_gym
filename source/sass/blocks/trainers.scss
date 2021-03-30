@@ -200,6 +200,7 @@
     .trainers {
         max-width: 1199px;
         margin: 0 auto;
+        padding-bottom: 65px;
     }
 
     .trainers__container {
@@ -230,7 +231,6 @@
 
     .trainers__wrapper {
         max-width: 565px;
-        padding-bottom: 65px;
         margin: 0 auto;
     }
 
@@ -257,6 +257,10 @@
 
     .trainers__toggle {
         display: none;
+    }
+
+    .trainers__next-wrap {
+        right: 5px;
     }
 }
 
