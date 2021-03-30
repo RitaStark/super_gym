@@ -125,17 +125,26 @@
     }
 
     .contacts__wrapper h2 {
-        font-size: 27px;
+        font-size: 32px;
         margin-top: 65px;
-        margin-bottom: 29px;
+        margin-bottom: 22px;
     }
 
     .contacts__container {
         flex-direction: column;
+        margin-right: 15px;
+
+        &::after {
+            display: none;
+        }
     }
 
     .contacts__unit + .contacts__unit {
         padding-left: 0;
         border-left: none;
+    }
+
+    .contacts__item h3 {
+        letter-spacing: 0.07em;
     }
 }

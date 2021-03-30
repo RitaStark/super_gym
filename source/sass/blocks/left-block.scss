@@ -205,3 +205,20 @@
         letter-spacing: 0.04em;
     }
 }
+
+// mobile ----------------------------------------------------------------------------
+
+@media (max-width: $tablet-width) {
+    .left-block__header {
+        font-size: 52px;
+    }
+
+    .left-block > p {
+        margin-top: 3px;
+    }
+
+    .left-block__date-wrapper p {
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+}

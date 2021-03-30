@@ -115,16 +115,18 @@
     }
 
     .promotions-left__info h3 {
-        margin-left: 11px;
+        margin-left: 0;
         margin-top: 22px;
     }
 
     .promotions-left__info h3 + p {
         margin-bottom: 9px;
+        margin-left: 0;
     }
 
     .promotions-left__info p + p {
-        margin-bottom: 32px;
+        margin-bottom: 20px;
+        line-height: 29px;
     }
 
     .promotions-left__image {
@@ -133,6 +135,11 @@
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        min-height: 299px;
+        max-height: 299px;
+    }
+
+    .promotions-left__info a {
+        margin-left: 0;
+        font-size: 15px;
     }
 }

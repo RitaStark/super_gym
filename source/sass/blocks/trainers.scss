@@ -143,6 +143,7 @@
         content: "";
         position: absolute;
         background-image: url("../img/arrow-right.png");
+        background-repeat: no-repeat;
         background-size: 16px 32px;
         width: 16px;
         height: 32px;
@@ -163,6 +164,7 @@
         position: absolute;
         background-image: url("../img/arrow-left.png");
         background-size: 16px 32px;
+        background-repeat: no-repeat;
         width: 16px;
         height: 32px;
         top: 10px;
@@ -267,6 +269,10 @@
 // mobile ----------------------------------------------------------------------------
 
 @media (max-width: $tablet-width) {
+    .trainers {
+        padding-bottom: 50px;
+    }
+
     .trainers__container {
         max-width: 377px;
         margin: 0 auto;
@@ -275,7 +281,6 @@
     .trainers__wrapper {
         max-width: 260px;
         margin: 0 auto;
-        padding-bottom: 50px;
     }
 
     .trainers h2 {
@@ -289,6 +294,10 @@
     .trainers__list {
         column-gap: 40px;
         margin-left: 17px;
+    }
+
+    .trainers__item {
+        margin-left: 0;
     }
 
     .trainers__item-1,
@@ -314,5 +323,32 @@
         &::before {
             left: 7px;
         }
+    }
+
+    .trainers__next-wrap,
+    .trainers__prev-wrap {
+        width: 25px;
+        height: 25px;
+    }
+
+    .trainers__next-wrap {
+        right: 12px;
+    }
+
+    .trainers__prev-wrap {
+        left: 7px;
+    }
+
+    .trainers__next-button,
+    .trainers__prev-button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .trainers__next-button::before,
+    .trainers__prev-button::before {
+        background-size: 13px 21px;
+        top: 0;
+        right: 0;
     }
 }

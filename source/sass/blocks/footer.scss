@@ -118,20 +118,25 @@
     .footer__wrapper {
         display: block;
         margin: 0 auto 0 15px;
-        padding-bottom: 46px;
+        padding-bottom: 39px;
     }
 
     .footer__menu {
         display: flex;
         flex-direction: row;
-        column-gap: 80px;
+        column-gap: 74px;
     }
 
     .footer__menu ul {
+        font-size: 16px;
         display: flex;
         flex-direction: column;
         margin-left: 0;
-        row-gap: 22px;
+        row-gap: 20px;
+    }
+
+    .footer__menu ul + ul {
+        margin-top: 6px;
     }
 
     .footer__social {
@@ -156,5 +161,10 @@
     .footer__social-img--fb {
         width: 13px;
         height: 26px;
+    }
+
+    .footer__logo-pic {
+        width: 68px;
+        height: 15px;
     }
 }

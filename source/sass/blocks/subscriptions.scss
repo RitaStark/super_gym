@@ -313,8 +313,9 @@
     }
 
     .subscriptions__wrapper h2 {
-        font-size: 28px;
-        margin-bottom: 26px;
+        font-size: 31px;
+        margin-bottom: 23px;
+        margin-top: 23px;
     }
 
     .subscriptions__toggle-list-wrapper {
@@ -368,7 +369,7 @@
     }
 
     .subscriptions__list-item h3 + p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .subscriptions__container::after {
@@ -377,17 +378,22 @@
 
     .subscriptions__list-item p:last-of-type {
         font-size: 47px;
-        margin-top: 67px;
+        margin-top: 65px;
         margin-bottom: 60px;
+        letter-spacing: 0.02em;
+        margin-left: 11px;
     }
 
     .subscriptions__toggle-item {
-        padding-bottom: 12px;
+        padding-bottom: 16px;
+        font-size: 14px;
+        letter-spacing: 0.03em;
     }
 
     .subscriptions__toggle-list {
         &::after {
             width: 100%;
+            top: 33px;
         }
     }
 }
